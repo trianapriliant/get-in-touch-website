@@ -1,0 +1,93 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Dependensi
+node_modules/
+# Alasan: Folder node_modules berisi dependensi yang diinstal via npm. Ini besar dan dapat dihasilkan ulang dengan package.json.
+
+# File build dan cache Next.js
+.next/
+out/
+# Alasan: .next berisi file yang dihasilkan selama pengembangan dan build. out berisi hasil build statis. Keduanya dapat dihasilkan ulang.
+
+# File lingkungan
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Alasan: File .env berisi variabel lingkungan seperti kunci API. Mengunggahnya ke GitHub dapat membocorkan data sensitif.
+
+# Cache dan log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Alasan: File log bersifat sementara dan tidak relevan untuk repositori.
+
+# File sementara editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+# Alasan: File ini spesifik untuk editor atau IDE (misalnya VS Code, IntelliJ). Tidak perlu dilacak karena bersifat personal.
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+# Alasan: File ini dibuat oleh macOS atau Windows dan tidak relevan untuk proyek.
+
+# Cache Tailwind CSS
+tailwind.config.js.cache
+# Alasan: Cache ini dihasilkan oleh Tailwind CSS dan dapat dihasilkan ulang.
+
+# File build lainnya
+dist/
+build/
+# Alasan: Folder ini mungkin dihasilkan jika Anda menggunakan alat build tambahan. Dapat dihasilkan ulang.
+
+# Coverage testing
+coverage/
+# Alasan: Folder ini berisi laporan pengujian kode dan tidak perlu dilacak.
