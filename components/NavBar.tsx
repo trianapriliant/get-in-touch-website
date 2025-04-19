@@ -31,7 +31,7 @@ export default function NavBar() {
             <li><Link href="#contact" className="text-lg hover:bg-neutral-800 rounded-md">Contact</Link></li>
           </ul>
         </div>
-        <Link href="#home" className="btn btn-ghost text-xl">[Your Name]</Link>
+        <Link href="#home" className="btn btn-ghost text-xl">Trian Aprilianto</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

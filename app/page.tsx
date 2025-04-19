@@ -37,10 +37,10 @@ export default function Home() {
         <section id="home" className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-6xl md:text-8xl font-bold mb-4">
-              Web Designer & Developer
+              Small Designer & Developer
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8">
-              Premium Web Design, Development, and SEO services to help your business stand out.
+              Premium & Cheap Web/Graphic Design, Development, and SEO services to help your business stand out.
             </p>
             <Link href="#about">
               <button className="btn btn-primary">Learn More</button>
@@ -53,11 +53,11 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="about-container">
               <div className="flex flex-col justify-center">
-                <h2 className="text-5xl font-bold mb-4">[Your Initials]</h2>
+                <h2 className="text-5xl font-bold mb-5">[Your Initials]</h2>
                 <p className="text-2xl text-gray-300 mb-4">
                   [Your Name] is a passionate web designer and developer, creating impactful digital experiences.
                 </p>
-                <p className="text-lg text-gray-400 mb-8">
+                <p className="text-lg text-gray-400 mb-20">
                   Freelance Developer based in [Your City]
                 </p>
                 <div className="flex flex-col gap-2">
