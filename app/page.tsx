@@ -3,6 +3,7 @@ import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import SkillMarquee from '@/components/SkillMarquee'
+import AboutSection from '@/components/AboutSection'
 
 const projects = [
   { id: 1, title: "Project 1", image: "/images/project1.jpg", link: "https://example.com/project1" },
@@ -47,39 +48,8 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
+        <AboutSection />
         {/* About Section */}
-        <section id="about" className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="about-container">
-              <div className="flex flex-col justify-center">
-                <h2 className="text-5xl font-bold mb-5">[Your Initials]</h2>
-                <p className="text-2xl text-gray-300 mb-4">
-                  [Your Name] is a passionate web designer and developer, creating impactful digital experiences.
-                </p>
-                <p className="text-lg text-gray-400 mb-20">
-                  Freelance Developer based in [Your City]
-                </p>
-                <div className="flex flex-col gap-2">
-                  <Link href="#contact" className="text-gray-300 hover:text-white">Connect</Link>
-                  <Link href="https://x.com/yourusername" className="text-gray-300 hover:text-white">Twitter/X</Link>
-                  <Link href="https://linkedin.com/in/yourusername" className="text-gray-300 hover:text-white">LinkedIn</Link>
-                  <Link href="https://instagram.com/yourusername" className="text-gray-300 hover:text-white">Instagram</Link>
-                  <Link href="mailto:your.email@example.com" className="text-gray-300 hover:text-white">Email</Link>
-                </div>
-              </div>
-              <div className="profile-image">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Profile"
-                  width={500}
-                  height={500}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-base-200">
