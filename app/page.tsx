@@ -14,7 +14,7 @@ const projects = [
 ]
 
 const skillsTop = [
-  { name: 'Bootstrap', color: 'bg-purple-600' },
+  { name: 'Bootstrap', color: 'bg-purple-300' },
   { name: 'JSON', color: 'bg-gray-600' },
   { name: 'Framer Motion', color: 'bg-blue-600' },
   { name: 'React Native', color: 'bg-cyan-600' },
@@ -38,10 +38,10 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-6xl md:text-8xl font-bold mb-4">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 mr-4 ml-4">
               Small Designer & Developer
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 mr-6 ml-6">
               Premium & Cheap Web/Graphic Design, Development, and SEO services to help your business stand out.
             </p>
             <Link href="#about">
@@ -49,28 +49,14 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <AboutSection />
-        {/* About Section */}
 
-        <ProjectGallery />
+        {/* About Section */}
+        <AboutSection />
+
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-base-400">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-8 text-center">Work & Visual Feed</h2>
-            <div className="projects-grid">
-              {projects.map((project) => (
-                <Link key={project.id} href={project.link} className="project-card">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                </Link>
-              ))}
-            </div>
-          </div>
+        {/* Project Gallery Section */}
+        <ProjectGallery />
         </section>
 
         {/* Skill Section */}
@@ -83,7 +69,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-base-400">
+        <section id="contact" className="py-16 bg-base-200">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST" className="max-w-md mx-auto">

@@ -33,7 +33,7 @@ export default function AboutSection() {
 
                 <div className="texts">
                   <h1 className={`text For Anyone text-2xl text-white mb-4 ${activeOption === 'For Anyone' ? 'block' : 'hidden'}`}>
-                    Hello there, I’m a designer who cares about making beautiful things that help people.
+                    Hello there, I’m a designer who cares about making beautiful things that help people building their projects or startup.
                   </h1>
                   <h1 className={`text recruiters text-2xl text-white mb-4 ${activeOption === 'recruiters' ? 'block' : 'hidden'}`}>
                     I’m a product designer with 15 years of experience across brand and product, at companies large and small. I’m not actively looking for a new role.
@@ -59,10 +59,10 @@ export default function AboutSection() {
 
             <div className="flex flex-col gap-2 mt-8">
               <a href="#contact" className="text-gray-300 hover:text-white">Connect</a>
-              <a href="https://x.com/yourusername" className="text-gray-300 hover:text-white">Twitter/X</a>
-              <a href="https://linkedin.com/in/yourusername" className="text-gray-300 hover:text-white">LinkedIn</a>
-              <a href="https://instagram.com/yourusername" className="text-gray-300 hover:text-white">Instagram</a>
-              <a href="mailto:your.email@example.com" className="text-gray-300 hover:text-white">Email</a>
+              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-white">Twitter/X</a>
+              <a href="https://linkedin.com/in/trianaprilianto3" className="text-gray-300 hover:text-white">LinkedIn</a>
+              <a href="https://instagram.com/trianapriliant" className="text-gray-300 hover:text-white">Instagram</a>
+              <a href="mailto:trianaprilinto3@gmail.com" className="text-gray-300 hover:text-white">Email</a>
             </div>
           </div>
 
