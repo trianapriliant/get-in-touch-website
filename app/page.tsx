@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import SkillMarquee from '@/components/SkillMarquee'
 import AboutSection from '@/components/AboutSection'
+import ProjectGallery from '@/components/ProjectGallery'
 
 const projects = [
   { id: 1, title: "Project 1", image: "/images/project1.jpg", link: "https://example.com/project1" },
@@ -44,15 +45,16 @@ export default function Home() {
               Premium & Cheap Web/Graphic Design, Development, and SEO services to help your business stand out.
             </p>
             <Link href="#about">
-              <button className="btn btn-primary">Learn More</button>
+              <button className="btn btn-outline">Dive in</button>
             </Link>
           </div>
         </section>
         <AboutSection />
         {/* About Section */}
 
+        <ProjectGallery />
         {/* Projects Section */}
-        <section id="projects" className="py-16 bg-base-200">
+        <section id="projects" className="py-16 bg-base-400">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-8 text-center">Work & Visual Feed</h2>
             <div className="projects-grid">
@@ -81,7 +83,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-base-200">
+        <section id="contact" className="py-16 bg-base-400">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST" className="max-w-md mx-auto">
