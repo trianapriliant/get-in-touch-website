@@ -59,6 +59,7 @@ export default function AboutSection() {
 
             <div className="flex flex-col gap-2 mt-8">
               <a href="#contact" className="text-gray-300 hover:text-white">Connect</a>
+              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-white">GitHub</a>
               <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-white">Twitter/X</a>
               <a href="https://linkedin.com/in/trianaprilianto3" className="text-gray-300 hover:text-white">LinkedIn</a>
               <a href="https://instagram.com/trianapriliant" className="text-gray-300 hover:text-white">Instagram</a>
@@ -68,7 +69,7 @@ export default function AboutSection() {
 
           <div className="profile-image w-full lg:flex-1">
             <img
-              src="/images/profile.jpg"
+              src="/images/profile/profile.jpg"
               alt="Profile"
               className="w-full max-h-[1000px] object-cover rounded-lg"
             />

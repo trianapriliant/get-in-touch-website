@@ -5,6 +5,8 @@ import Footer from '@/components/Footer'
 import SkillMarquee from '@/components/SkillMarquee'
 import AboutSection from '@/components/AboutSection'
 import ProjectGallery from '@/components/ProjectGallery'
+import SkillShow from '@/components/SkillShow'
+import SkillShowDesign from '@/components/SkillShowDesign'
 
 const projects = [
   { id: 1, title: "Project 1", image: "/images/project1.jpg", link: "https://example.com/project1" },
@@ -14,21 +16,29 @@ const projects = [
 ]
 
 const skillsTop = [
-  { name: 'Bootstrap', color: 'bg-purple-300' },
-  { name: 'JSON', color: 'bg-gray-600' },
-  { name: 'Framer Motion', color: 'bg-blue-600' },
-  { name: 'React Native', color: 'bg-cyan-600' },
-  { name: 'TypeScript', color: 'bg-blue-800' },
+  { name: 'Git', src: '/images/skills/git.png' },
+  { name: 'CSS', src: '/images/skills/css.png' },
+  { name: 'HTML', src: "/images/skills/html.png" },
+  { name: 'JavaScript', src: '/images/skills/javascript.png' },
+  { name: 'NextJS', src: '/images/skills/nextjs.png' },
+  { name: 'GitHub', src: '/images/skills/github.png' },
+  { name: 'React', src: '/images/skills/react.png' },
+  { name: 'Typescript', src: '/images/skills/typescript.png' },
+  { name: 'Python', src: '/images/skills/python.png' },
 ]
 
 const skillsBottom = [
-  { name: 'SASS', color: 'bg-pink-600' },
-  { name: 'Bootstrap', color: 'bg-purple-600' },
-  { name: 'Express.js', color: 'bg-green-600' },
-  { name: 'TailwindCSS', color: 'bg-teal-600' },
-  { name: 'Storybook', color: 'bg-pink-500' },
-  { name: 'React', color: 'bg-blue-500' },
+  { name: 'Gimp', src: '/images/skills/gimp.png' },
+  { name: 'Inkscape', src: '/images/skills/inkscape.png' },
+  { name: 'Kdenlive', src: "/images/skills/kdenlive.png" },
+  { name: 'Blender', src: '/images/skills/blender.png' },
+  { name: 'Spline', src: '/images/skills/spline.png' },
+  { name: 'Notion', src: '/images/skills/notion.png' },
+  { name: 'LinuxOS', src: '/images/skills/arch.png' },
+  { name: 'Figma', src: '/images/skills/figma.png' },
+  { name: 'VN', src: '/images/skills/vn.png' },
 ]
+
 
 export default function Home() {
   return (
@@ -62,14 +72,16 @@ export default function Home() {
         {/* Skill Section */}
         <section id="skill" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-8 text-center">My Skills</h2>
-            <SkillMarquee skills={skillsTop} direction="right" />
-            <SkillMarquee skills={skillsBottom} direction="left" />
+            <h2 className="text-4xl font-bold mb-8 text-center">Playground &  Interest</h2>
+            <SkillMarquee skills={skillsTop} direction="left" />
+          </div>
+          <div className="container mx-auto px-4">
+            <SkillMarquee skills={skillsBottom} direction="right" />
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-base-200">
+        <section id="contact" className="py-16 bg-base-100/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST" className="max-w-md mx-auto">

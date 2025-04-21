@@ -23,7 +23,7 @@ export default function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-md dropdown-content bg-neutral-900 rounded-xl z-[1] mt-3 w-64 p-4 shadow-lg transform transition-all duration-300"
+            className="menu menu-md dropdown-content bg-neutral-900 rounded-xl z-[1] mt-3 w-90 p-4 shadow-lg transform transition-all duration-300"
           >
             <li><Link href="#home" className="text-lg hover:bg-neutral-800 rounded-md">Home</Link></li>
             <li><Link href="#projects" className="text-lg hover:bg-neutral-800 rounded-md">Projects</Link></li>
