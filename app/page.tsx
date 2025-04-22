@@ -8,39 +8,8 @@ import ProjectGallery from '@/components/ProjectGallery'
 import SkillShow from '@/components/SkillShow'
 import SkillShowDesign from '@/components/SkillShowDesign'
 
-const projects = [
-  { id: 1, title: "Project 1", image: "/images/project1.jpg", link: "https://example.com/project1" },
-  { id: 2, title: "Project 2", image: "/images/project2.jpg", link: "https://example.com/project2" },
-  { id: 3, title: "Project 3", image: "/images/project3.jpg", link: "https://example.com/project3" },
-  { id: 4, title: "Project 4", image: "/images/project4.jpg", link: "https://example.com/project4" },
-]
-
-const skillsTop = [
-  { name: 'Git', src: '/images/skills/git.png' },
-  { name: 'CSS', src: '/images/skills/css.png' },
-  { name: 'TailwindCSS', src: '/images/skills/tailwindcss.png' },
-  { name: 'HTML', src: "/images/skills/html.png" },
-  { name: 'JavaScript', src: '/images/skills/javascript.png' },
-  { name: 'NextJS', src: '/images/skills/nextjs.png' },
-  { name: 'GitHub', src: '/images/skills/github.png' },
-  { name: 'React', src: '/images/skills/react.png' },
-  { name: 'Typescript', src: '/images/skills/typescript.png' },
-  { name: 'Python', src: '/images/skills/python.png' },
-  { name: 'ThreeJS', src: '/images/skills/threejs.png' },
-]
-
-const skillsBottom = [
-  { name: 'Gimp', src: '/images/skills/gimp.png' },
-  { name: 'Inkscape', src: '/images/skills/inkscape.png' },
-  { name: 'Kdenlive', src: "/images/skills/kdenlive.png" },
-  { name: 'Blender', src: '/images/skills/blender.png' },
-  { name: 'Spline', src: '/images/skills/spline.png' },
-  { name: 'Notion', src: '/images/skills/notion.png' },
-  { name: 'LinuxOS', src: '/images/skills/arch.png' },
-  { name: 'Figma', src: '/images/skills/figma.png' },
-  { name: 'VN', src: '/images/skills/vn.png' },
-]
-
+import { skillsBottom } from '@/data/skills'
+import { skillsTop } from '@/data/skills'
 
 export default function Home() {
   return (
