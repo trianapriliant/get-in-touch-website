@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import MusicPlayer from './MusicPlayer';
 
 export default function NavBar() {
   return (
@@ -42,10 +43,13 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="navbar-end">
+        <div className="mr-2">
+          <MusicPlayer />
+        </div>
         <Link href="#contact" className="btn btn-outline">
           Let's Talk
         </Link>
       </div>
     </div>
-  )
+  );
 }
