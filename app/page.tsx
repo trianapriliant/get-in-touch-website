@@ -18,6 +18,7 @@ const projects = [
 const skillsTop = [
   { name: 'Git', src: '/images/skills/git.png' },
   { name: 'CSS', src: '/images/skills/css.png' },
+  { name: 'TailwindCSS', src: '/images/skills/tailwindcss.png' },
   { name: 'HTML', src: "/images/skills/html.png" },
   { name: 'JavaScript', src: '/images/skills/javascript.png' },
   { name: 'NextJS', src: '/images/skills/nextjs.png' },
@@ -25,6 +26,7 @@ const skillsTop = [
   { name: 'React', src: '/images/skills/react.png' },
   { name: 'Typescript', src: '/images/skills/typescript.png' },
   { name: 'Python', src: '/images/skills/python.png' },
+  { name: 'ThreeJS', src: '/images/skills/threejs.png' },
 ]
 
 const skillsBottom = [
@@ -65,7 +67,6 @@ export default function Home() {
 
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-base-400">
-        {/* Project Gallery Section */}
         <ProjectGallery />
         </section>
 
@@ -73,10 +74,10 @@ export default function Home() {
         <section id="skill" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-8 text-center">Playground &  Interest</h2>
-            <SkillMarquee skills={skillsTop} direction="left" />
+            <SkillMarquee skills={skillsTop} direction="right" />
           </div>
           <div className="container mx-auto px-4">
-            <SkillMarquee skills={skillsBottom} direction="right" />
+            <SkillMarquee skills={skillsBottom} direction="left" />
           </div>
         </section>
 
