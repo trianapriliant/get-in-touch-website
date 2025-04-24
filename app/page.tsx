@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import SkillMarquee from '@/components/SkillMarquee';
 import AboutSection from '@/components/AboutSection';
 import ProjectGallery from '@/components/ProjectGallery';
+import SplineViewer from '@/components/SplineViewer';
 import Waveform from '@/components/WaveForm'; // Corrected import (WaveForm -> Waveform)
 
 import SkillShow from '@/components/SkillShow';
@@ -32,7 +33,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
         {/* About Section */}
         <AboutSection />
 

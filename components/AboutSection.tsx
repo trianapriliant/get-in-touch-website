@@ -18,7 +18,7 @@ export default function AboutSection() {
                 {/* Gradasi di sisi kiri dan kanan dihapus */}
 
                 <div className="options flex flex-wrap gap-4 mb-8">
-                  {['For Anyone', 'recruiters', 'design-directors', 'product-designers', 'product-managers', 'engineers'].map((option) => (
+                  {[ 'For Anyone', 'Small Business', 'Student', 'Freelancer', 'Events', 'Projects'].map((option) => (
                     <div
                       key={option}
                       className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-300 hover:text-white ${
@@ -33,22 +33,22 @@ export default function AboutSection() {
 
                 <div className="texts">
                   <h1 className={`text For Anyone text-2xl text-white mb-4 ${activeOption === 'For Anyone' ? 'block' : 'hidden'}`}>
-                    Hello there, I’m a designer who cares about making beautiful things that help people building their projects or startup.
+                    Hi there! I’m just starting out as a designer, and I love helping people bring their ideas to life through thoughtful, affordable design.
                   </h1>
-                  <h1 className={`text recruiters text-2xl text-white mb-4 ${activeOption === 'recruiters' ? 'block' : 'hidden'}`}>
-                    I’m a product designer with 15 years of experience across brand and product, at companies large and small. I’m not actively looking for a new role.
+                  <h1 className={`text Small Business text-2xl text-white mb-4 ${activeOption === 'Small Business' ? 'block' : 'hidden'}`}>
+                    Need a logo, promo banner, or Instagram feed that looks clean and attractive? I offer affordable designs to help build your brand presence.
                   </h1>
-                  <h1 className={`text design-directors text-2xl text-white mb-4 ${activeOption === 'design-directors' ? 'block' : 'hidden'}`}>
-                    I take pride in my craft, and love mentoring earlier career designers. I develop cross functional partnerships, and thrive in complex, ambiguous environments.
+                  <h1 className={`text Student text-2xl text-white mb-4 ${activeOption === 'Student' ? 'block' : 'hidden'}`}>
+                    I design posters, presentations, infographics, and other academic visuals to help you communicate your ideas more clearly and professionally.
                   </h1>
-                  <h1 className={`text product-designers text-2xl text-white mb-4 ${activeOption === 'product-designers' ? 'block' : 'hidden'}`}>
-                    I’m a systems thinker with a high bar for quality. From process to pixels, I’ll collaborate with you, learn from you, and help make something we’re proud of.
+                  <h1 className={`text Freelancer text-2xl text-white mb-4 ${activeOption === 'Freelancer' ? 'block' : 'hidden'}`}>
+                    Build your personal brand with simple, clean visuals — from logos and mini portfolios to social media templates that reflect your skills and style.
                   </h1>
-                  <h1 className={`text product-managers text-2xl text-white mb-4 ${activeOption === 'product-managers' ? 'block' : 'hidden'}`}>
-                    I bring end-to-end product acumen, from vision and strategy to discovery and delivery. I’ll partner closely with you to generate the highest impact possible.
+                  <h1 className={`text Events text-2xl text-white mb-4 ${activeOption === 'Events' ? 'block' : 'hidden'}`}>
+                    Digital invitations, e-certificates, flyers, and promotional materials for your seminars, workshops, or community events — tailored to your needs.
                   </h1>
-                  <h1 className={`text engineers text-2xl text-white mb-4 ${activeOption === 'engineers' ? 'block' : 'hidden'}`}>
-                    I’m highly technical and while I’m not an engineer, I know my way around & can speak “fluently” with you; I built{' '}
+                  <h1 className={`text Projects text-2xl text-white mb-4 ${activeOption === 'Projects' ? 'block' : 'hidden'}`}>
+                    Got a creative idea or side project? I can help you turn it into visuals that are simple, effective, and ready to use.{' '}
                     <a href="https://billysweeney.com/" className="underline">this.site</a>,{' '}
                     <a href="https://ratio.haus/" target="_blank" rel="noopener noreferrer" className="underline">this.one</a>, and{' '}
                     <a href="https://gibberishfactory.com/" target="_blank" rel="noopener noreferrer" className="underline">this.too</a>.
