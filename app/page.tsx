@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import SkillMarquee from '@/components/SkillMarquee';
 import AboutSection from '@/components/AboutSection';
 import ProjectGallery from '@/components/ProjectGallery';
+import ContactForm from '@/components/ContactForm';
+
 import SplineViewer from '@/components/SplineViewer';
 import Waveform from '@/components/WaveForm'; // Corrected import (WaveForm -> Waveform)
 
@@ -52,21 +54,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* ContactForm Section */}
         <section id="contact" className="py-16 bg-base-100/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST" className="max-w-md mx-auto">
-              <div className="mb-4">
-                <label className="block text-lg mb-2">Name</label>
-                <input type="text" name="name" className="input input-bordered w-full" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-lg mb-2">Email</label>
-                <input type="email" name="email" className="input input-bordered w-full" required />
-              </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            <ContactForm />
           </div>
         </section>
       </main>

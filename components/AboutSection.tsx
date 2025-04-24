@@ -33,7 +33,7 @@ export default function AboutSection() {
 
                 <div className="texts">
                   <h1 className={`text For Anyone text-2xl text-white mb-4 ${activeOption === 'For Anyone' ? 'block' : 'hidden'}`}>
-                    Hi there! I’m just starting out as a designer, and I love helping people bring their ideas to life through thoughtful, affordable design.
+                    Hi there! I’m just starting out as a small designer & developer, and I love helping people bring their ideas to life through thoughtful, affordable thing.
                   </h1>
                   <h1 className={`text Small Business text-2xl text-white mb-4 ${activeOption === 'Small Business' ? 'block' : 'hidden'}`}>
                     Need a logo, promo banner, or Instagram feed that looks clean and attractive? I offer affordable designs to help build your brand presence.
@@ -42,7 +42,7 @@ export default function AboutSection() {
                     I design posters, presentations, infographics, and other academic visuals to help you communicate your ideas more clearly and professionally.
                   </h1>
                   <h1 className={`text Freelancer text-2xl text-white mb-4 ${activeOption === 'Freelancer' ? 'block' : 'hidden'}`}>
-                    Build your personal brand with simple, clean visuals — from logos and mini portfolios to social media templates that reflect your skills and style.
+                    Build your personal website brand with simple, clean visual with mini portfolios to social media templates that reflect your skills and style.
                   </h1>
                   <h1 className={`text Events text-2xl text-white mb-4 ${activeOption === 'Events' ? 'block' : 'hidden'}`}>
                     Digital invitations, e-certificates, flyers, and promotional materials for your seminars, workshops, or community events — tailored to your needs.

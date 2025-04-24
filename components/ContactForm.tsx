@@ -1,0 +1,59 @@
+export default function ContactForm() {
+    return (
+      <form
+        action="https://formspree.io/f/your-form-id"
+        method="POST"
+        className="max-w-md mx-auto text-left bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-md border border-white/10"
+      >
+        <div className="mb-5">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-1">
+            Your Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition"
+          />
+        </div>
+  
+        <div className="mb-5">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-1">
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition"
+          />
+        </div>
+  
+        <div className="mb-6">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-1">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            placeholder="Tell me about your project..."
+            required
+            className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary transition resize-none"
+          />
+        </div>
+  
+        <button
+          type="submit"
+          className="w-full text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary/50 transition btn btn-outline"
+        >
+          Send Message
+        </button>
+      </form>
+    );
+  }
+  
