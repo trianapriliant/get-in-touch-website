@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Hero from '@/components/Hero';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import SkillMarquee from '@/components/SkillMarquee';
@@ -23,17 +24,7 @@ export default function Home() {
       <main className="pt-16">
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center relative">
-          <div className="text-center z-10">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 mr-4 ml-4">
-              Small Designer & Developer
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 mr-6 ml-6">
-              Premium & Cheap Web/Graphic Design, Development, and SEO services to help your business stand out.
-            </p>
-            <Link href="#about">
-              <button className="btn btn-outline">Dive in</button>
-            </Link>
-          </div>
+        <Hero />
         </section>
         {/* About Section */}
         <AboutSection />
@@ -45,8 +36,10 @@ export default function Home() {
 
         {/* Skill Section */}
         <section id="skill" className="py-16">
+          <div className='container mx-auto px-4 text-center'>
+            <h2 className="text-4xl font-bold mb-8">Playground & Interest</h2>
+          </div>
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-8 text-center">Playground & Interest</h2>
             <SkillMarquee skills={skillsTop} direction="right" />
           </div>
           <div className="container mx-auto px-4">
@@ -56,10 +49,7 @@ export default function Home() {
 
         {/* ContactForm Section */}
         <section id="contact" className="py-16 bg-base-100/20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
-            <ContactForm />
-          </div>
+          <ContactForm />
         </section>
       </main>
       <Footer />

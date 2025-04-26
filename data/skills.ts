@@ -1,5 +1,6 @@
 import { Skill } from "@/types/skill"
 
+// Predefined size classes for each project to ensure consistency
 export const skillsTop: Skill[] = [
   { name: 'Git', src: '/images/skills/git.png' },
   { name: 'CSS', src: '/images/skills/css.png' },

@@ -1,7 +1,11 @@
 export default function ContactForm() {
-    return (
+  return (
+    <div>
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
+      </div>
       <form
-        action="https://formspree.io/f/your-form-id"
+        action="https://formspree.io/f/xldbdjzj"
         method="POST"
         className="max-w-md mx-auto text-left bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-md border border-white/10"
       >
@@ -54,6 +58,7 @@ export default function ContactForm() {
           Send Message
         </button>
       </form>
+    </div>
     );
   }
   
