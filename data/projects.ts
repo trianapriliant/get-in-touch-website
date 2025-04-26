@@ -88,7 +88,7 @@ export const projects: Project[] = [
     description: 'Deskripsi project 11',
     image: 'https://placehold.co/600x400?text=Project+11',
     link: '#',
-    sizeClass: 'row-span-2 col-span-2',
+    sizeClass: 'row-span-1 col-span-2',
   },
   {
     id: 12,
