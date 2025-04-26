@@ -7,7 +7,7 @@ export const projects: Project[] = [
     title: 'PCB Defect Detector',
     description: 'YOLOv8 deep learning model to detect defects in printed circuit board (PCB) images',
     image: '/images/projects/p1-map.png',
-    link: 'https://github.com/trianapriliant/PCB-Defect-Detector',
+    link: 'https://github.com/trianapriliant/Material-Analyzer-Python',
     sizeClass: 'row-span-1 col-span-2',
   },
   {
