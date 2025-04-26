@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import Hero from '@/components/Hero';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -7,13 +5,6 @@ import SkillMarquee from '@/components/SkillMarquee';
 import AboutSection from '@/components/AboutSection';
 import ProjectGallery from '@/components/ProjectGallery';
 import ContactForm from '@/components/ContactForm';
-
-import SplineViewer from '@/components/SplineViewer';
-import Waveform from '@/components/WaveForm'; // Corrected import (WaveForm -> Waveform)
-
-import SkillShow from '@/components/SkillShow';
-import SkillShowDesign from '@/components/SkillShowDesign';
-
 import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
 
