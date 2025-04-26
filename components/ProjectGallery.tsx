@@ -6,13 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { projects } from '@/data/projects'
 
-const sizeVariants = [
-  'row-span-1 col-span-1',
-  'row-span-1 col-span-2',
-  'row-span-2 col-span-1',
-  'row-span-2 col-span-2',
-]
-
 // Animation variants for the project card
 const cardVariants = {
   hidden: { opacity: 0, y: 30, rotate: 2 },

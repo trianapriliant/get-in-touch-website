@@ -47,7 +47,7 @@ export default function NavBar() {
           <MusicPlayer />
         </div>
         <Link href="#contact" className="btn btn-outline">
-          Let's Talk
+          Let&apos;s Talk
         </Link>
       </div>
     </div>
