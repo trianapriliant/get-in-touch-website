@@ -10,7 +10,7 @@ export default function Hero() {
           Offering custom web design and development — along with a range of small to medium creative digital projects.
         </p>
         <Link href="#about">
-          <button className="btn btn-outline">Dive in</button>
+          <button className="btn btn-outline hover:!text-white">Dive in</button>
         </Link>
       </div>
     )

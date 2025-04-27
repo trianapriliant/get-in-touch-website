@@ -21,8 +21,8 @@ export default function AboutSection() {
                   {[ 'For Anyone', 'Small Business', 'Student', 'Freelancer', 'Events', 'Projects'].map((option) => (
                     <div
                       key={option}
-                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-300 hover:text-white ${
-                        activeOption === option ? 'is--active bg-gray-100/50' : ''
+                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white ${
+                        activeOption === option ? 'btn btn-outline is--active bg-gray-900/0 dark:bg-gray-100/0' : ''
                       }`}
                       onClick={() => handleOptionClick(option)}
                     >

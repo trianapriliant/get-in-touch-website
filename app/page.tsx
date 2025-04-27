@@ -10,7 +10,7 @@ import { skillsTop } from '@/data/skills';
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-base-400'>
       <NavBar />
       <main className="pt-16">
         {/* Hero Section */}
@@ -39,7 +39,7 @@ export default function Home() {
         </section>
 
         {/* ContactForm Section */}
-        <section id="contact" className="py-16 bg-base-100/20">
+        <section id="contact" className="py-16 bg-base-100/3">
           <ContactForm />
         </section>
       </main>
