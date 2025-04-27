@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'Treean',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="dark">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
