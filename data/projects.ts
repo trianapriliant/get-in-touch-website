@@ -4,18 +4,18 @@ import { Project } from "@/types/project"
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'PCB Defect Detector',
-    description: 'YOLOv8 deep learning model to detect defects in printed circuit board (PCB) images',
-    image: '/images/projects/p1-map.png',
+    title: '',
+    description: '',
+    image: '/images/projects/Page1.png',
     link: 'https://github.com/trianapriliant/Material-Analyzer-Python',
     sizeClass: 'row-span-1 col-span-2',
   },
   {
     id: 2,
-    title: 'Project 2',
-    description: 'Deskripsi project 2',
-    image: 'https://placehold.co/600x400?text=Project+2',
-    link: '#',
+    title: 'PCB Defect Detector',
+    description: 'YOLOv8 deep learning model to detect defects in printed circuit board (PCB) images',
+    image: '/images/projects/Page2.png',
+    link: 'https://github.com/trianapriliant/PCB-Defect-Detector',
     sizeClass: 'row-span-2 col-span-1',
   },
   {
