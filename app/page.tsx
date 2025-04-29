@@ -7,6 +7,7 @@ import ProjectGallery from '@/components/ProjectGallery';
 import ContactForm from '@/components/ContactForm';
 import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
+import { skillsBucket } from '@/data/skills';
 
 export default function Home() {
   return (
@@ -28,13 +29,19 @@ export default function Home() {
         {/* Skill Section */}
         <section id="skill" className="py-16">
           <div className='container mx-auto px-4 text-center'>
-            <h2 className="text-4xl font-bold mb-8">Playground & Interest</h2>
+            <h2 className="text-4xl font-bold mb-2">Playground & Interest</h2>
           </div>
           <div className="container mx-auto px-4">
             <SkillMarquee skills={skillsTop} direction="right" />
           </div>
           <div className="container mx-auto px-4">
             <SkillMarquee skills={skillsBottom} direction="left" />
+          </div>
+          <div className='container mx-auto px-4 text-center'>
+            <h2 className="text-4xl font-bold mt-7 mb-2">Bucket Skill</h2>
+          </div>
+          <div className="container mx-auto px-4">
+            <SkillMarquee skills={skillsBucket} direction="right" />
           </div>
         </section>
 

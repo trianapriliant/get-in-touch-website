@@ -18,7 +18,7 @@ export const skillsTop: Skill[] = [
 export const skillsBottom: Skill[] = [
   { name: 'Gimp', src: '/images/skills/gimp.png' },
   { name: 'Inkscape', src: '/images/skills/inkscape.png' },
-  { name: 'Kdenlive', src: "/images/skills/kdenlive.png" },
+  { name: 'Kdenlive', src: '/images/skills/kdenlive.png' },
   { name: 'Blender', src: '/images/skills/blender.png' },
   { name: 'Spline', src: '/images/skills/spline.png' },
   { name: 'Notion', src: '/images/skills/notion.png' },
@@ -26,3 +26,11 @@ export const skillsBottom: Skill[] = [
   { name: 'Figma', src: '/images/skills/figma.png' },
   { name: 'VN', src: '/images/skills/vn.png' },
 ]
+
+export const skillsBucket: Skill[] = [
+  { name: 'C++', src: '/images/skills/cpp.png'},
+  { name: 'ROS', src: '/images/skills/ros.png'},
+  { name: 'IoT', src: '/images/skills/iot.png'},
+  { name: 'ControlSystem', src: '/images/skills/vs.png'},
+  { name: 'Arduino', src: '/images/skills/arduino.png'},
+  ]

@@ -17,7 +17,7 @@ export default function SkillMarquee({ skills, direction = 'left' }: SkillMarque
   <div>
     <div className="w-full overflow-hidden whitespace-nowrap bg-gray dark:bg-gray-900/10 py-4">
       <div
-        className={`flex w-max gap-4 px-4 ${
+        className={`flex w-max gap-5 px-4 ${
           direction === 'right' ? 'animate-marquee-right' : 'animate-marquee-left'
         }`}
       >
