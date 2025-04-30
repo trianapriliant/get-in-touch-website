@@ -1,10 +1,10 @@
-import Hero from '@/components/Hero';
-import NavBar from '@/components/NavBar';
-import Footer from '@/components/Footer';
-import SkillMarquee from '@/components/SkillMarquee';
-import AboutSection from '@/components/AboutSection';
-import ProjectGallery from '@/components/ProjectGallery';
-import ContactForm from '@/components/ContactForm';
+import Hero from '@/components/section/Hero';
+import NavBar from '@/components/layout/NavBar';
+import Footer from '@/components/layout/Footer';
+import SkillMarquee from '@/components/section/SkillMarquee';
+import AboutSection from '@/components/section/AboutSection';
+import ProjectGallery from '@/components/section/ProjectGallery';
+import ContactForm from '@/components/section/ContactForm';
 import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
 import { skillsBucket } from '@/data/skills';
@@ -14,10 +14,12 @@ export default function Home() {
     <div className='bg-base-400'>
       <NavBar />
       <main className="pt-16">
+
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center relative">
         <Hero />
         </section>
+
         {/* About Section */}
         <AboutSection />
 
@@ -49,6 +51,7 @@ export default function Home() {
         <section id="contact" className="py-16 bg-base-100/3">
           <ContactForm />
         </section>
+
       </main>
       <Footer />
     </div>

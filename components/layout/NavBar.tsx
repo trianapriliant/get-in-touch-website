@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import MusicPlayer from './MusicPlayer';
+import MusicPlayer from '../feature/MusicPlayer';
 
 export default function NavBar() {
   return (

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
-import SkillMarquee from '@/components/SkillMarquee'
+import NavBar from '@/components/layout/NavBar'
+import Footer from '@/components/layout/Footer'
+import SkillMarquee from '@/components/section/SkillMarquee'
 
 const projects = [
   { id: 1, title: "Project 1", description: "Description of project 1", image: "/images/project1.jpg", link: "https://example.com/project1" },
