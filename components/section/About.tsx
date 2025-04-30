@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-export default function AboutSection() {
+export default function About() {
   const [activeOption, setActiveOption] = useState('For Anyone');
 
   const handleOptionClick = (option: string) => {

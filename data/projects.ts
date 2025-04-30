@@ -40,7 +40,7 @@ export const projects: Project[] = [
     description: 'Deskripsi project 5',
     image: 'https://placehold.co/600x400?text=Project+5',
     link: '#',
-    sizeClass: 'row-span-2 col-span-1',
+    sizeClass: 'row-span-3 col-span-1',
   },
   {
     id: 6,
@@ -80,22 +80,7 @@ export const projects: Project[] = [
     description: 'Deskripsi project 10',
     image: 'https://placehold.co/600x400?text=Project+10',
     link: '#',
-    sizeClass: 'row-span-1 col-span-1',
+    sizeClass: 'row-span-1 col-span-',
   },
-  {
-    id: 11,
-    title: 'Project 11',
-    description: 'Deskripsi project 11',
-    image: 'https://placehold.co/600x400?text=Project+11',
-    link: '#',
-    sizeClass: 'row-span-1 col-span-2',
-  },
-  {
-    id: 12,
-    title: 'Project 12',
-    description: 'Deskripsi project 12',
-    image: 'https://placehold.co/600x400?text=Project+12',
-    link: '#',
-    sizeClass: 'row-span-1 col-span-1',
-  },
+
 ]

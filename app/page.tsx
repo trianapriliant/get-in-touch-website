@@ -2,7 +2,7 @@ import Hero from '@/components/section/Hero';
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 import SkillMarquee from '@/components/section/SkillMarquee';
-import AboutSection from '@/components/section/AboutSection';
+import About from '@/components/section/About';
 import ProjectGallery from '@/components/section/ProjectGallery';
 import ContactForm from '@/components/section/ContactForm';
 import { skillsBottom } from '@/data/skills';
@@ -21,7 +21,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <AboutSection />
+        <About />
 
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-base-400">
