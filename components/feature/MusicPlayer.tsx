@@ -18,7 +18,7 @@ export default function MusicPlayer() {
 
   return (
     <div>
-      <audio ref={audioRef} src="/music/phonk1.mp3" />
+      <audio ref={audioRef} src="/music/lofi1.mp3" />
       <button onClick={togglePlayPause} className="btn btn-ghost hover:!text-white transition">
         {isPlaying ? (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
