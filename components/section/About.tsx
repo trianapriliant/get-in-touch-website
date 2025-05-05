@@ -48,10 +48,7 @@ export default function About() {
                     Digital invitations, e-certificates, flyers, and promotional materials for your seminars, workshops, or community events — tailored to your needs.
                   </h1>
                   <h1 className={`text Projects text-2xl text-white mb-4 ${activeOption === 'Projects' ? 'block' : 'hidden'}`}>
-                    Got a creative idea or side project? I can help you turn it into visuals that are simple, effective, and ready to use.{' '}
-                    <a href="https://billysweeney.com/" className="underline">this.site</a>,{' '}
-                    <a href="https://ratio.haus/" target="_blank" rel="noopener noreferrer" className="underline">this.one</a>, and{' '}
-                    <a href="https://gibberishfactory.com/" target="_blank" rel="noopener noreferrer" className="underline">this.too</a>.
+                    Got a creative idea or side project? I can help you turn it into visuals that are simple, effective, and ready to use.
                   </h1>
                 </div>
               </div>
