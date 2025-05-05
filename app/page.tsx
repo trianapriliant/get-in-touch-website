@@ -38,9 +38,6 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <SkillMarquee skills={skillsBottom} direction="left" />
           </div>
-          <div className='container mx-auto px-4 text-center'>
-            <h2 className="text-4xl font-bold mt-7 mb-2">Bucket Skill</h2>
-          </div>
         </section>
 
         {/* ContactForm Section */}
