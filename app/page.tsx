@@ -7,7 +7,6 @@ import ProjectGallery from '@/components/section/ProjectGallery';
 import ContactForm from '@/components/section/ContactForm';
 import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
-import { skillsBucket } from '@/data/skills';
 
 export default function Home() {
   return (
@@ -41,9 +40,6 @@ export default function Home() {
           </div>
           <div className='container mx-auto px-4 text-center'>
             <h2 className="text-4xl font-bold mt-7 mb-2">Bucket Skill</h2>
-          </div>
-          <div className="container mx-auto px-4">
-            <SkillMarquee skills={skillsBucket} direction="right" />
           </div>
         </section>
 

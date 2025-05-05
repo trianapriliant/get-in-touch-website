@@ -26,11 +26,3 @@ export const skillsBottom: Skill[] = [
   { name: 'Figma', src: '/images/skills/figma.png' },
   { name: 'VN', src: '/images/skills/vn.png' },
 ]
-
-export const skillsBucket: Skill[] = [
-  { name: 'C++', src: '/images/skills/cpp.png'},
-  { name: 'ROS', src: '/images/skills/ros.png'},
-  { name: 'IoT', src: '/images/skills/iot.png'},
-  { name: 'ControlSystem', src: '/images/skills/vs.png'},
-  { name: 'Arduino', src: '/images/skills/arduino.png'},
-  ]
