@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function About() {
@@ -65,8 +66,8 @@ export default function About() {
           </div>
 
           <div className="profile-image w-full lg:flex-1">
-            <img
-              src="/images/profile/profile.jpg"
+            <Image
+              src="/images/profile/profile1.jpg"
               alt="Profile"
               className="w-full max-h-[1000px] object-cover rounded-lg"
             />
