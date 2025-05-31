@@ -65,13 +65,15 @@ export default function About() {
             </div>
           </div>
 
-          <div className="profile-image w-full lg:flex-1">
+          <div className="relative w-full aspect-[4/3] lg:flex-1">
             <Image
-              src="/images/profile/profile1.jpg"
+              src="/images/profile/profile1.jpeg"
               alt="Profile"
-              className="w-full max-h-[1000px] object-cover rounded-lg"
+              fill
+              className="object-cover rounded-lg"
             />
           </div>
+
         </div>
       </div>
     </section>
