@@ -42,10 +42,10 @@ export default function SkillMarquee({ skills, direction = 'left' }: SkillMarque
 
       <style jsx>{`
         .animate-marquee-left {
-          animation: marquee-left 30s linear infinite;
+          animation: marquee-left 60s linear infinite;
         }
         .animate-marquee-right {
-          animation: marquee-right 30s linear infinite;
+          animation: marquee-right 60s linear infinite;
         }
         @keyframes marquee-left {
           0% {
