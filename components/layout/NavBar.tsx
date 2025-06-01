@@ -1,55 +1,97 @@
+
+'use client'
+
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MusicPlayer from '../feature/MusicPlayer';
+import Image from 'next/image';
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skill", label: "Skill" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
-    <div className="navbar bg-transparent fixed top-0 w-full z-10">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden hover:bg-neutral-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-md dropdown-content bg-neutral-100 dark:bg-neutral-900 rounded-xl z-[1] mt-3 w-90 p-4 shadow-lg transform transition-all duration-300"
-          >
-            <li><Link href="#home" className="text-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 rounded-md">Home</Link></li>
-            <li><Link href="#projects" className="text-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 rounded-md">Projects</Link></li>
-            <li><Link href="#skill" className="text-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 rounded-md">Skill</Link></li>
-            <li><Link href="#contact" className="text-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 rounded-md">Contact</Link></li>
-          </ul>
-        </div>
-        <Link href="#home" className="btn btn-ghost text-xl hover:bg-neutral-800 hover:!text-white">Trian Aprilianto</Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><Link href="#home" className="text-lg">Home</Link></li>
-          <li><Link href="#projects" className="text-lg">Projects</Link></li>
-          <li><Link href="#skill" className="text-lg">Skill</Link></li>
-          <li><Link href="#contact" className="text-lg">Contact</Link></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <div className="mr-2">
-          <MusicPlayer />
-        </div>
-        <Link href="#contact" className="btn btn-outline hover:!text-white">
-          Let&apos;s Talk
+    <div className="fixed top-0 w-full z-20 backdrop-blur bg-transparent m-1">
+      <div className="mx-auto max-w-7xl px-4 py-2 flex justify-between items-center">
+        {/* Logo */}
+        <Link href="#home" className="text-white font-bold text-xl hover:text-primary transition-colors">
+          Trian Aprilianto
         </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex gap-6 items-center">
+          {navLinks.map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-lg hover:text-primary transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <MusicPlayer />
+          <Link
+            href="#contact"
+            className="btn btn-outline hover:!text-white"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button onClick={toggleMenu} className="lg:hidden text-white">
+          <Image
+            src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
+            alt="menu"
+            width={24}
+            height={24}
+          />
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="lg:hidden bg-neutral-900/10 px-4 py-6 rounded-b-xl shadow-md"
+        >
+          <ul className="flex flex-col gap-4 text-center">
+            {navLinks.map(link => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="block text-lg text-white hover:text-primary transition"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="#contact"
+                className="btn btn-outline w-full mt-2 hover:!text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                Let&apos;s Talk
+              </Link>
+            </li>
+          </ul>
+        </motion.div>
+      )}
     </div>
   );
 }
