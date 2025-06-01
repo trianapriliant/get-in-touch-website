@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion'
 
 export default function About() {
   const [activeOption, setActiveOption] = useState('For Anyone');
@@ -65,14 +66,22 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative w-full aspect-[3/4] lg:flex-1">
+
+          <motion.div
+            whileHover={{
+              scale: 1.01,
+              rotate: 0.0,
+              transition: { type: "spring", stiffness: 200 },
+            }}
+            className="relative w-full aspect-[3/4] lg:flex-1"
+          >
             <Image
               src="/images/profile/profile.png"
               alt="Profile"
               fill
               className="object-cover rounded-lg"
             />
-          </div>
+          </motion.div>
 
         </div>
       </div>
