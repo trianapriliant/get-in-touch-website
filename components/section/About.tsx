@@ -79,8 +79,9 @@ export default function About() {
               src="/images/profile/profile.png"
               alt="Profile"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover rounded-lg filter grayscale hover:grayscale-0 transition duration-500"
             />
+
           </motion.div>
 
         </div>
