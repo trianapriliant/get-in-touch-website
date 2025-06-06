@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className='bg-base-400'>
       <NavBar />
-      <main className="pt-16">
+      <main>
 
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center relative">
