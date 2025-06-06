@@ -53,17 +53,17 @@ export default function Hero() {
       />
 
       {/* ISI HERO */}
-      <div className="text-center z-10">
+      <div className="text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 mx-4">
           Small Designer <br />
-          + <span className="text-lime-700 dark:!text-lime-500">{text}</span>
+          + <span className="text-lime-600 dark:!text-lime-500">{text}</span>
           <span className="animate-pulse">|</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 mx-6">
           Offering custom web design and development — along with a range of small to medium creative digital projects.
         </p>
         <Link href="#about">
-          <button className="btn btn-outline hover:!text-black hover:bg-lime-500">Dive in</button>
+          <button className="btn bg-lime-500 hover:!text-black dark:!text-black hover:bg-lime-600 rounded-3xl border-0">Dive in</button>
         </Link>
       </div>
     </div>

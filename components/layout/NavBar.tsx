@@ -22,7 +22,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="fixed top-0 w-full z-20 backdrop-blur bg-transparent m-1">
+    <div className="fixed top-0 w-full z-20 backdrop-blur bg-base-100/0 ">
       <div className="mx-auto max-w-7xl px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link href="#home" className="text-white font-bold text-xl hover:text-primary transition-colors">
@@ -66,7 +66,7 @@ export default function NavBar() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden bg-neutral-900/10 px-4 py-6 rounded-b-xl shadow-md"
+          className="lg:hidden bg-neutral-900/0 px-4 py-10 rounded-b-4xl shadow-md"
         >
           <ul className="flex flex-col gap-4 text-center">
             {navLinks.map(link => (
@@ -83,7 +83,7 @@ export default function NavBar() {
             <li>
               <Link
                 href="#contact"
-                className="btn btn-outline w-full mt-2 hover:!text-black hover:bg-lime-500"
+                className="btn btn-outline w-full hover:!text-black hover:bg-lime-500"
                 onClick={() => setIsOpen(false)}
               >
                 Let&apos;s Talk
