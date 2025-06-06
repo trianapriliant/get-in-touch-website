@@ -58,7 +58,7 @@ export default function Home() {
               className="rounded-full mx-auto mb-4"
             />
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Hi, I'm [Your Name], a passionate web designer and developer with a knack for creating beautiful and functional websites.
+              Hi, I&apos;m [Your Name], a passionate web designer and developer with a knack for creating beautiful and functional websites.
             </p>
           </div>
         </section>

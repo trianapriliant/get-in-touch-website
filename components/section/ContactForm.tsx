@@ -31,7 +31,7 @@ export default function ContactForm() {
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
                        focus:outline-none focus:ring-2 
-                       focus:ring-primary transition"
+                       focus:ring-lime-500 transition"
           />
         </div>
 
@@ -52,7 +52,7 @@ export default function ContactForm() {
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
                        focus:outline-none focus:ring-2 
-                       focus:ring-primary transition"
+                       focus:ring-lime-500 transition"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function ContactForm() {
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
                        focus:outline-none focus:ring-2 
-                       focus:ring-primary transition resize-none"
+                       focus:ring-lime-500 transition resize-none"
           />
         </div>
 
@@ -82,7 +82,7 @@ export default function ContactForm() {
           className="w-full 
                      text-gray-800 dark:text-white 
                      font-semibold py-2 px-4 rounded-lg 
-                     hover:bg-primary/50 
+                     hover:bg-lime-500 hover:!text-black
                      transition btn btn-outline border-gray-400 dark:border-white/20"
         >
           Send Message

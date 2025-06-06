@@ -83,7 +83,7 @@ export default function NavBar() {
             <li>
               <Link
                 href="#contact"
-                className="btn btn-outline w-full mt-2 hover:!text-white"
+                className="btn btn-outline w-full mt-2 hover:!text-black hover:bg-lime-500"
                 onClick={() => setIsOpen(false)}
               >
                 Let&apos;s Talk
