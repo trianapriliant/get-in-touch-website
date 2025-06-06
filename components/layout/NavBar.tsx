@@ -22,7 +22,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="fixed top-0 w-full z-20 backdrop-blur bg-transparen m-1">
+    <div className="fixed top-0 w-full z-20 backdrop-blur bg-transparent m-1">
       <div className="mx-auto max-w-7xl px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link href="#home" className="text-white font-bold text-xl hover:text-primary transition-colors">
