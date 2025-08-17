@@ -7,6 +7,8 @@ import ProjectGallery from '@/components/section/ProjectGallery';
 import ContactForm from '@/components/section/ContactForm';
 import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
+import HorizontalGallery from "@/components/section/HorizontalGallery"
+import { projects } from "@/data/projects"
 
 export default function Home() {
   return (
@@ -17,6 +19,12 @@ export default function Home() {
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center justify-center relative">
         <Hero />
+        </section>
+
+        {/* Horizontal Gallery Section */}
+        <section id="portfolio-alt" className="py-24">
+        <h2 className="text-3xl font-bold mb-8 text-center">Alternate Portfolio</h2>
+        <HorizontalGallery items={projects} itemWidth={300} gap={12} />
         </section>
 
         {/* About Section */}
