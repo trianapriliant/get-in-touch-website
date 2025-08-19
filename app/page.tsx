@@ -20,6 +20,9 @@ export default function Home() {
         <section id="home" className="min-h-screen flex items-center justify-center relative">
         <Hero />
         </section>
+        
+        {/* About Section */}
+        <About />
 
         {/* Horizontal Gallery Section */}
         <section id="portfolio-alt" className="py-24">
@@ -27,8 +30,6 @@ export default function Home() {
         <HorizontalGallery items={projects} itemWidth={300} gap={12} />
         </section>
 
-        {/* About Section */}
-        <About />
 
         {/* Projects Section */}
         <section id="projects" className="py-16 bg-base-400">

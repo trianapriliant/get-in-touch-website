@@ -47,8 +47,10 @@ export default function About() {
                   {[ 'For Anyone', 'Small Business', 'Student', 'Freelancer', 'Events', 'Projects'].map((option) => (
                     <div
                       key={option}
-                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white ${
-                        activeOption === option ? 'btn btn-outline is--active bg-gray-900/0 dark:bg-lime-500 dark:!text-black' : ''
+                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-900 dark:text-gray-300 hover:text-accent transition-colors ${
+                        activeOption === option
+                          ? 'is--active bg-accent text-accent-contrast dark:bg-accent'
+                          : ''
                       }`}
                       onClick={() => handleOptionClick(option)}
                     >
@@ -81,12 +83,12 @@ export default function About() {
             </div>
 
             <div className="flex flex-col gap-2 mt-8">
-              <a href="#contact" className="text-gray-300 hover:text-white">Connect</a>
-              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-white">GitHub</a>
-              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-white">Twitter/X</a>
-              <a href="https://linkedin.com/in/trianaprilianto3" className="text-gray-300 hover:text-white">LinkedIn</a>
-              <a href="https://instagram.com/trianapriliant" className="text-gray-300 hover:text-white">Instagram</a>
-              <a href="mailto:trianaprilinto3@gmail.com" className="text-gray-300 hover:text-white">Email</a>
+              <a href="#contact" className="text-gray-300 hover:text-accent transition-colors">Connect</a>
+              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-accent transition-colors">GitHub</a>
+              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-accent transition-colors">Twitter/X</a>
+              <a href="https://linkedin.com/in/trianaprilianto3" className="text-gray-300 hover:text-accent transition-colors">LinkedIn</a>
+              <a href="https://instagram.com/trianapriliant" className="text-gray-300 hover:text-accent transition-colors">Instagram</a>
+              <a href="mailto:trianaprilinto3@gmail.com" className="text-gray-300 hover:text-accent transition-colors">Email</a>
             </div>
           </div>
 

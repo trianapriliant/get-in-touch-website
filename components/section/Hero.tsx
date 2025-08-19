@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const words = ["Developer", "Modder", "Planner", "Creator"];
+const words = ["Developer", "Modder", "Creator", "Freelancer"];
 
 export default function Hero() {
   const [text, setText] = useState("");
@@ -48,15 +48,15 @@ export default function Hero() {
       <div className="text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 mx-4">
           Small Designer <br />
-          + <span className="text-lime-600 dark:!text-lime-500">{text}</span>
+          + <span className="text-accent">{text}</span>
           <span className="animate-pulse">|</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 mx-6">
-          Offering custom web design and development — along with a range of small to medium creative digital projects.
+          Offering custom web design and development - along with a range of small to medium creative digital projects.
         </p>
         <button
           onClick={() => scrollToSection("about")}
-          className="btn bg-lime-500 hover:!text-black dark:!text-black hover:bg-lime-600 rounded-3xl border-0"
+          className="btn bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong rounded-3xl border border-black/6 dark:border-transparent px-6 py-2"
           aria-label="Scroll to about"
         >
           Dive in
