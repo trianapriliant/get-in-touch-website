@@ -9,6 +9,7 @@ import { skillsBottom } from '@/data/skills';
 import { skillsTop } from '@/data/skills';
 import HorizontalGallery from "@/components/section/HorizontalGallery"
 import { projects } from "@/data/projects"
+import IntroScroll from '@/components/section/IntroScroll';
 
 export default function Home() {
   return (
@@ -20,19 +21,27 @@ export default function Home() {
         <section id="home" className="min-h-screen flex items-center justify-center relative">
         <Hero />
         </section>
-        
+
         {/* About Section */}
         <About />
 
+        {/* Intro Scroll Section */}
+        <section id="intro-scroll" className="py-16 bg-gray-1000 mt-15">
+          <IntroScroll
+            title="Welcome to My Portfolio"
+            subtitle="Explore my work and creative projects"
+            targetId="portfolio-alt"
+          />
+        </section>
+
         {/* Horizontal Gallery Section */}
-        <section id="portfolio-alt" className="py-24">
-        <h2 className="text-3xl font-bold mb-8 text-center">Alternate Portfolio</h2>
-        <HorizontalGallery items={projects} itemWidth={300} gap={12} />
+        <section id="portfolio-alt" className="">
+        <HorizontalGallery items={projects} gap={10} />
         </section>
 
 
         {/* Projects Section */}
-        <section id="projects" className="py-16 bg-base-400">
+        <section id="projects">
           <ProjectGallery />
         </section>
 

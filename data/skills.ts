@@ -13,6 +13,8 @@ export const skillsTop: Skill[] = [
   { name: 'Typescript', src: '/images/skills/typescript.png' },
   { name: 'Python', src: '/images/skills/python.png' },
   { name: 'ThreeJS', src: '/images/skills/threejs.png' },
+  { name: 'GSAP', src: '/images/skills/gsap.svg' },
+  { name: 'Wordpress', src: '/images/skills/wordpress.png' },
 ]
 
 export const skillsBottom: Skill[] = [

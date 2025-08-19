@@ -27,13 +27,13 @@ type Props = {
 export default function HorizontalGallery({
   items = defaultProjects as unknown as Item[],
   gap = 16,
-  itemWidth = 400,
-  itemHeight = 700,
+  itemWidth = 450,
+  itemHeight = 800,
   title,
   className = "",
 }: Props) {
   // sesuaikan dengan tinggi navbar (px)
-  const NAV_HEIGHT = 50
+  const NAV_HEIGHT = 60
   const viewportRef = useRef<HTMLDivElement | null>(null) // area that will be pinned
   const trackRef = useRef<HTMLDivElement | null>(null)
   const ctxRef = useRef<gsap.Context | null>(null)
