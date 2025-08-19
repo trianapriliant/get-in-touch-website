@@ -10,11 +10,35 @@ export default function About() {
     setActiveOption(option);
   };
 
+  // tambahkan variants di atas return atau di file scope
+  const imgVariants = {
+    rest: {
+      scale: 1,
+      y: 0,
+      filter: "grayscale(100%) contrast(95%)",
+      boxShadow: "0px 8px 24px rgba(0,0,0,0.18)",
+    },
+    hover: {
+      scale: 1.035,
+      y: -6,
+      filter: "grayscale(0%) contrast(104%) saturate(115%)",
+      boxShadow: "0px 20px 50px rgba(0,0,0,0.32)",
+    },
+  }
+
+  const overlayVariants = {
+    rest: { y: 12, opacity: 0 },
+    hover: { y: 0, opacity: 1 },
+  }
+
   return (
     <section id="about" className="py-16 bg-gray-1000">
       <div className="container mx-auto px-4">
-        <div className="about-container flex flex-col lg:flex-row gap-8">
-          <div className="flex-1">
+        {/* pastikan pada large screens baris disejajarkan di tengah vertikal */}
+        {/* batasi lebar baris dan center seluruh block agar tidak menempel ke tepi */}
+        <div className="about-container flex flex-col lg:flex-row gap-8 lg:items-center min-h-[60vh] max-w-6xl mx-auto justify-center">
+          {/* teks diatur agar ter-center vertikal di kolomnya; beri padding kanan untuk keseimbangan */}
+          <div className="flex-1 flex flex-col justify-center pr-6 lg:pr-12">
             <div className="section intro relative">
               <div className="content">
                 {/* Gradasi di sisi kiri dan kanan dihapus */}
@@ -66,22 +90,35 @@ export default function About() {
             </div>
           </div>
 
-
           <motion.div
-            whileHover={{
-              scale: 1.01,
-              rotate: 0.0,
-              transition: { type: "spring", stiffness: 200 },
-            }}
-            className="relative w-full aspect-[3/4] lg:flex-1"
-          >
+            className="relative flex-none w-full lg:w-[520px] rounded-lg overflow-hidden self-center"
+             initial="rest"
+             whileHover="hover"
+             animate="rest"
+             variants={imgVariants}
+             transition={{ duration: 0.28, ease: "easeOut" }}
+             style={{ willChange: "transform, filter, boxShadow" }}
+           >
+            {/* Use explicit width/height so image won't grow to fill viewport height on large screens.
+                Adjust lg:w and height below to taste (now wider on desktop). */}
             <Image
               src="/images/profile/profile.png"
               alt="Profile"
-              fill
-              className="object-cover rounded-lg filter grayscale hover:grayscale-0 transition duration-500"
+              width={520}
+              height={700}
+              sizes="(max-width: 640px) 60vw, 520px"
+              className="object-cover w-full h-auto"
             />
 
+            {/* overlay judul muncul saat hover */}
+            <motion.div
+              className="absolute left-0 right-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white"
+              variants={overlayVariants}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+            >
+              <h3 className="text-sm font-semibold">Trian Aprilianto</h3>
+              <p className="text-xs text-gray-200">Small Designer & Developer</p>
+            </motion.div>
           </motion.div>
 
         </div>

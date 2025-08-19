@@ -49,14 +49,30 @@ export default function HorizontalGallery({
       })
     }
 
+    // setup with actual measured item width and side padding so a stopped card centers
     const setup = () => {
       cleanTriggers()
+
+      // measure first child width (actual rendered width because we use clamp)
+      const firstChild = track.children[0] as HTMLElement | undefined
+      if (!firstChild) return null
+      const itemWidthActual = Math.round(firstChild.getBoundingClientRect().width)
+
+      // compute side padding so a card can be centered in the viewport area
+      // on very wide (large) screens start aligned to the left (no extra centering)
+      const LARGE_BREAKPOINT = 1280
+      const sidePadding =
+        viewport.clientWidth >= LARGE_BREAKPOINT
+          ? 0
+          : Math.max(0, (viewport.clientWidth - itemWidthActual) / 2)
+      track.style.paddingLeft = `${sidePadding}px`
+      track.style.paddingRight = `${sidePadding}px`
+
       const distance = Math.max(0, track.scrollWidth - viewport.clientWidth)
       if (distance === 0) return null
 
-      const stepPx = itemWidth + gap
-      // progress-step for snap (fraction of full progress)
-      const stepFraction = stepPx / distance
+      const stepPx = itemWidthActual + gap
+      const maxIndex = Math.max(0, track.children.length - 1)
 
       const ctx = gsap.context(() => {
         gsap.to(track, {
@@ -64,18 +80,17 @@ export default function HorizontalGallery({
           ease: "none",
           scrollTrigger: {
             trigger: viewport,
-            // trigger when center of the viewport area reaches center of the screen
-            // this makes the pinned area and motion start from vertical center
             start: "center center",
-            end: () => `+=${distance}`, // map scroll px to track travel px
-            pin: true, // pin the viewport only (title is outside)
+            end: () => `+=${distance}`,
+            pin: true,
             scrub: 0.6,
             snap: {
-              // snap to nearest item step in progress-space
               snapTo: (value: number) => {
-                if (stepFraction <= 0) return value
-                const nearest = Math.round(value / stepFraction) * stepFraction
-                return Math.max(0, Math.min(1, nearest))
+                // convert progress (0..1) -> px then snap to nearest stepPx
+                const px = value * distance
+                const nearestIndex = Math.round(px / stepPx)
+                const clamped = Math.max(0, Math.min(maxIndex, nearestIndex))
+                return (clamped * stepPx) / distance
               },
               duration: 0.35,
               ease: "power2.out",
@@ -118,6 +133,12 @@ export default function HorizontalGallery({
 
     return () => {
       if (ctxRef.current) ctxRef.current.revert()
+      // clear inline paddings we set
+      try {
+        track.style.paddingLeft = ""
+        track.style.paddingRight = ""
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (e) {}
       ro.disconnect()
       clearTimeout(to)
       cleanTriggers()

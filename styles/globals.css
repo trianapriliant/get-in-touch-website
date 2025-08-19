@@ -39,7 +39,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* pastikan ini sesuai NAV_HEIGHT */
+  scroll-padding-top: 72px;
 }
+
+/* Jika ingin memastikan setiap section tidak tertutup: */
+/* section { scroll-margin-top: 84px; } */
 
 /* Marquee Animation */
 .marquee-container {
