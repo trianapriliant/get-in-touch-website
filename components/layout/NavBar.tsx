@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState } from 'react';
@@ -21,11 +20,29 @@ export default function NavBar() {
     { href: "#contact", label: "Contact" },
   ];
 
+  const NAV_HEIGHT = 72;
+
+  // smooth scroll handler for internal anchors
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // let next/link default navigation not jump immediately
+    e.preventDefault();
+    setIsOpen(false);
+    const id = href.replace(/^#/, '');
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    } else {
+      // fallback: navigate to href if element not found
+      window.location.hash = href;
+    }
+  };
+
   return (
     <div className="fixed top-0 w-full z-20 backdrop-blur bg-base-100/0 ">
       <div className="mx-auto max-w-7xl px-4 py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link href="#home" className="text-white font-bold text-xl hover:text-primary transition-colors">
+        <Link href="#home" onClick={(e) => handleNavClick(e, "#home")} className="text-accent font-bold text-xl hover:brightness-95 transition-colors">
           Trian Aprilianto
         </Link>
 
@@ -35,7 +52,8 @@ export default function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-lg hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-gray-200 hover:text-accent transition-colors"
             >
               {link.label}
             </Link>
@@ -43,14 +61,15 @@ export default function NavBar() {
           <MusicPlayer />
           <Link
             href="#contact"
-            className="btn btn-outline hover:!text-white"
+            onClick={(e) => handleNavClick(e, "#contact")}
+            className="btn bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong rounded-md border-0"
           >
             Let&apos;s Talk
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button onClick={toggleMenu} className="lg:hidden text-white">
+        <button onClick={toggleMenu} className="lg:hidden text-accent">
           <Image
             src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
             alt="menu"
@@ -73,8 +92,8 @@ export default function NavBar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block text-lg text-white hover:text-primary transition"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="block text-lg text-gray-200 hover:text-accent transition"
                 >
                   {link.label}
                 </Link>
@@ -83,8 +102,8 @@ export default function NavBar() {
             <li>
               <Link
                 href="#contact"
-                className="btn btn-outline w-full hover:!text-black hover:bg-lime-500"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, "#contact")}
+                className="btn w-full bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong border-0"
               >
                 Let&apos;s Talk
               </Link>

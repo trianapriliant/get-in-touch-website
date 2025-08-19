@@ -30,8 +30,7 @@ export default function ContactForm() {
                        rounded-lg 
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
-                       focus:outline-none focus:ring-2 
-                       focus:ring-lime-500 transition"
+                       focus:outline-none focus:ring-2 focus:ring-accent transition"
           />
         </div>
 
@@ -51,8 +50,7 @@ export default function ContactForm() {
                        rounded-lg 
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
-                       focus:outline-none focus:ring-2 
-                       focus:ring-lime-500 transition"
+                       focus:outline-none focus:ring-2 focus:ring-accent transition"
           />
         </div>
 
@@ -72,17 +70,16 @@ export default function ContactForm() {
                        rounded-lg 
                        text-gray-800 dark:text-white 
                        placeholder-gray-500 dark:placeholder-gray-400 
-                       focus:outline-none focus:ring-2 
-                       focus:ring-lime-500 transition resize-none"
+                       focus:outline-none focus:ring-2 focus:ring-accent transition resize-none"
           />
         </div>
 
         <button
           type="submit"
           className="w-full 
-                     text-gray-800 dark:text-white 
+                     bg-accent text-accent-contrast dark:text-black
                      font-semibold py-2 px-4 rounded-lg 
-                     hover:bg-lime-500 hover:!text-black
+                     hover:bg-accent-strong hover:text-accent-contrast
                      transition btn btn-outline border-gray-400 dark:border-white/20"
         >
           Send Message
