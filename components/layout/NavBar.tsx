@@ -14,27 +14,48 @@ export default function NavBar() {
   };
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skill", label: "Skill" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/#projects", label: "Projects" },
+    { href: "/#skill", label: "Skill" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   const NAV_HEIGHT = 72;
 
   // smooth scroll handler for internal anchors
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // let next/link default navigation not jump immediately
+    // For home link, we don't need to prevent default
+    if (href === "/") {
+      setIsOpen(false);
+      return;
+    }
+    
+    // For other links, handle smooth scrolling
     e.preventDefault();
     setIsOpen(false);
-    const id = href.replace(/^#/, '');
-    const el = document.getElementById(id);
+    
+    // Check if it's a special "More About Me" link
+    if (href === "#footer") {
+      // Scroll to footer
+      const footer = document.getElementById('footer');
+      if (footer) {
+        const y = footer.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      return;
+    }
+    
+    // Extract hash from href (e.g., "/#projects" -> "projects")
+    const hash = href.split('#')[1];
+    if (!hash) return;
+    
+    const el = document.getElementById(hash);
     if (el) {
       const y = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
       window.scrollTo({ top: y, behavior: 'smooth' });
     } else {
       // fallback: navigate to href if element not found
-      window.location.hash = href;
+      window.location.hash = `#${hash}`;
     }
   };
 
@@ -42,7 +63,7 @@ export default function NavBar() {
     <div className="fixed top-0 w-full z-20 backdrop-blur bg-base-100/0 ">
       <div className="mx-auto max-w-7xl px-4 py-2 flex justify-between items-center">
         {/* Logo */}
-        <Link href="#home" onClick={(e) => handleNavClick(e, "#home")} className="text-accent font-bold text-xl hover:brightness-95 transition-colors">
+        <Link href="/" className="text-accent font-bold text-xl hover:brightness-95 transition-colors">
           Trian Aprilianto
         </Link>
 
@@ -58,10 +79,16 @@ export default function NavBar() {
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={(e) => handleNavClick(e, "#footer")}
+            className="text-gray-200 hover:text-accent transition-colors"
+          >
+            More About Me
+          </button>
           <MusicPlayer />
           <Link
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "#contact")}
+            href="/#contact"
+            onClick={(e) => handleNavClick(e, "/#contact")}
             className="btn bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong rounded-md border-0"
           >
             Let&apos;s Talk
@@ -100,9 +127,17 @@ export default function NavBar() {
               </li>
             ))}
             <li>
+              <button
+                onClick={(e) => handleNavClick(e, "#footer")}
+                className="block w-full text-lg text-gray-200 hover:text-accent transition py-2"
+              >
+                More About Me
+              </button>
+            </li>
+            <li>
               <Link
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "#contact")}
+                href="/#contact"
+                onClick={(e) => handleNavClick(e, "/#contact")}
                 className="btn w-full bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong border-0"
               >
                 Let&apos;s Talk

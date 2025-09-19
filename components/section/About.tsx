@@ -119,7 +119,7 @@ export default function About() {
               transition={{ duration: 0.28, ease: "easeOut" }}
             >
               <h3 className="text-sm font-semibold">Trian Aprilianto</h3>
-              <p className="text-xs text-gray-200">Small Designer & Developer</p>
+              <p className="text-xs text-gray-200">Designer & Developer</p>
             </motion.div>
           </motion.div>
 
