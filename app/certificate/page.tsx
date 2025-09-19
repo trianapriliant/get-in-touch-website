@@ -4,6 +4,7 @@ import { useState } from 'react';
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 import { certificatesData } from '@/data/certificates';
+import Image from 'next/image';
 
 export default function CertificatePage() {
   const [selectedCertificate, setSelectedCertificate] = useState(certificatesData[0]);
@@ -99,9 +100,11 @@ export default function CertificatePage() {
                       onClick={() => setSelectedCertificate(cert)}
                     >
                       <div className="h-48 overflow-hidden">
-                        <img 
+                        <Image 
                           src={cert.image} 
                           alt={cert.title} 
+                          width={400}
+                          height={300}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -123,9 +126,11 @@ export default function CertificatePage() {
                   {selectedCertificate && (
                     <>
                       <div className="mb-6">
-                        <img 
+                        <Image 
                           src={selectedCertificate.image} 
                           alt={selectedCertificate.title} 
+                          width={400}
+                          height={300}
                           className="w-full rounded-lg"
                         />
                       </div>

@@ -23,7 +23,7 @@ export default function NavBar() {
   const NAV_HEIGHT = 72;
 
   // smooth scroll handler for internal anchors
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     // For home link, we don't need to prevent default
     if (href === "/") {
       setIsOpen(false);
