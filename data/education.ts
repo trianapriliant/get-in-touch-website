@@ -2,18 +2,18 @@
 export const educationData = [
   {
     id: 1,
-    institution: 'University of Technology',
-    degree: 'Bachelor of Science in Computer Science',
-    period: '2018 - 2022',
-    description: 'Focused on software engineering and web development. Completed thesis on "Modern Web Application Architectures".',
-    gpa: '3.8/4.0',
+    institution: 'Sebelas Maret University',
+    degree: 'Bachelor of Science in Physics',
+    period: '2021 - 2025',
+    description: 'Focused on physics of course. Completed thesis on material stuff.',
+    gpa: '3.3/4.0',
   },
   {
     id: 2,
-    institution: 'State College',
-    degree: 'High School Diploma',
-    period: '2014 - 2018',
-    description: 'Specialized in Mathematics and Science. Participated in national programming competition.',
-    gpa: '3.9/4.0',
+    institution: 'SMA Unggulan CT ARSA Foundation Sukoharjo',
+    degree: 'High School',
+    period: '2018 - 2021',
+    description: 'I love learning physics and astronomy in this school.',
+    gpa: 'Still good I think',
   },
 ];

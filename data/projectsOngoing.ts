@@ -38,19 +38,6 @@ export const ongoingProjectsData = [
     estimatedCompletion: 'Jun 2023',
     teamSize: 4,
     role: 'Full Stack Developer'
-  },
-  {
-    id: 4,
-    title: 'Mobile Banking App',
-    client: 'FinSecure Bank',
-    status: 'Design',
-    progress: 30,
-    description: 'Design and development of a secure mobile banking application with biometric authentication.',
-    technologies: ['React Native', 'Redux', 'Firebase', 'Figma'],
-    startDate: 'Apr 2023',
-    estimatedCompletion: 'Aug 2023',
-    teamSize: 6,
-    role: 'Lead Mobile Developer'
   }
 ];
 

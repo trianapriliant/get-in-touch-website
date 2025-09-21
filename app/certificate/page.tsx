@@ -99,7 +99,7 @@ export default function CertificatePage() {
                       }`}
                       onClick={() => setSelectedCertificate(cert)}
                     >
-                      <div className="h-48 overflow-hidden">
+                      <div className="h-48 overflow-hidden relative">
                         <Image 
                           src={cert.image} 
                           alt={cert.title} 
@@ -107,11 +107,11 @@ export default function CertificatePage() {
                           height={300}
                           className="w-full h-full object-cover"
                         />
-                      </div>
-                      <div className="p-5">
-                        <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
-                        <p className="text-[#2AF5D2] font-medium mb-2">{cert.issuer}</p>
-                        <p className="text-sm text-gray-400">{cert.date}</p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-5">
+                          <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
+                          <p className="text-[#2AF5D2] font-medium">{cert.issuer}</p>
+                        </div>
                       </div>
                     </div>
                   ))}
