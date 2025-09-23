@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function About() {
   const [activeOption, setActiveOption] = useState('For Anyone');
@@ -31,6 +31,23 @@ export default function About() {
     hover: { y: 0, opacity: 1 },
   }
 
+  // Variants for tab animation
+  const tabVariants = {
+    inactive: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.2 }
+    },
+    active: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    }
+  }
+
   return (
     <section id="about" className="py-16 bg-gray-1000">
       <div className="container mx-auto px-4">
@@ -45,39 +62,53 @@ export default function About() {
 
                 <div className="options flex flex-wrap gap-4 mb-8">
                   {[ 'For Anyone', 'Small Business', 'Student', 'Freelancer', 'Events', 'Projects'].map((option) => (
-                    <div
+                    <motion.div
                       key={option}
-                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full text-gray-900 dark:text-gray-300 hover:text-accent transition-colors ${
+                      className={`option ${option} cursor-pointer px-4 py-2 rounded-full transition-colors ${
                         activeOption === option
-                          ? 'is--active bg-accent text-accent-contrast dark:bg-accent'
-                          : ''
+                          ? 'is--active bg-accent text-accent-contrast'
+                          : 'text-gray-900 dark:text-gray-300 hover:text-accent hover:bg-accent/10'
                       }`}
                       onClick={() => handleOptionClick(option)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
                       {option.charAt(0).toUpperCase() + option.slice(1).replace('-', ' ')}
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
-                <div className="texts">
-                  <h1 className={`text For Anyone text-2xl text-white mb-4 ${activeOption === 'For Anyone' ? 'block' : 'hidden'}`}>
-                    Hi there! I’m just starting out as a small designer & developer, and I love helping people bring their ideas to life through thoughtful, affordable thing.
-                  </h1>
-                  <h1 className={`text Small Business text-2xl text-white mb-4 ${activeOption === 'Small Business' ? 'block' : 'hidden'}`}>
-                    Need a logo, promo banner, or Instagram feed that looks clean and attractive? I offer affordable designs to help build your brand presence.
-                  </h1>
-                  <h1 className={`text Student text-2xl text-white mb-4 ${activeOption === 'Student' ? 'block' : 'hidden'}`}>
-                    I design posters, presentations, infographics, and other academic visuals to help you communicate your ideas more clearly and professionally.
-                  </h1>
-                  <h1 className={`text Freelancer text-2xl text-white mb-4 ${activeOption === 'Freelancer' ? 'block' : 'hidden'}`}>
-                    Build your personal website brand with simple, clean visual with mini portfolios to social media templates that reflect your skills and style.
-                  </h1>
-                  <h1 className={`text Events text-2xl text-white mb-4 ${activeOption === 'Events' ? 'block' : 'hidden'}`}>
-                    Digital invitations, e-certificates, flyers, and promotional materials for your seminars, workshops, or community events — tailored to your needs.
-                  </h1>
-                  <h1 className={`text Projects text-2xl text-white mb-4 ${activeOption === 'Projects' ? 'block' : 'hidden'}`}>
-                    Got a creative idea or side project? I can help you turn it into visuals that are simple, effective, and ready to use.
-                  </h1>
+                <div className="texts" style={{ minHeight: '120px' }}>
+                  <AnimatePresence mode="wait">
+                    <motion.h1
+                      key={activeOption}
+                      variants={tabVariants}
+                      initial="inactive"
+                      animate="active"
+                      exit="inactive"
+                      className="text text-2xl text-white mb-4"
+                    >
+                      {activeOption === 'For Anyone' && (
+                        "Hi there! I'm just starting out as a small designer & developer, and I love helping people bring their ideas to life through thoughtful, affordable thing."
+                      )}
+                      {activeOption === 'Small Business' && (
+                        "Need a logo, promo banner, or Instagram feed that looks clean and attractive? I offer affordable designs to help build your brand presence."
+                      )}
+                      {activeOption === 'Student' && (
+                        "I design posters, presentations, infographics, and other academic visuals to help you communicate your ideas more clearly and professionally."
+                      )}
+                      {activeOption === 'Freelancer' && (
+                        "Build your personal website brand with simple, clean visual with mini portfolios to social media templates that reflect your skills and style."
+                      )}
+                      {activeOption === 'Events' && (
+                        "Digital invitations, e-certificates, flyers, and promotional materials for your seminars, workshops, or community events — tailored to your needs."
+                      )}
+                      {activeOption === 'Projects' && (
+                        "Got a creative idea or side project? I can help you turn it into visuals that are simple, effective, and ready to use."
+                      )}
+                    </motion.h1>
+                  </AnimatePresence>
                 </div>
               </div>
             </div>

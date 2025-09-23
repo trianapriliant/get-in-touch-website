@@ -70,7 +70,7 @@ export default function Footer() {
         <hr className="my-8 border-gray-200 dark:border-gray-900" />
         
         <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} Trian Aprilianto. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Trian Aprilianto</p>
         </div>
       </div>
     </footer>
