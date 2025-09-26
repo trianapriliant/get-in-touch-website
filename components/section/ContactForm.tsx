@@ -10,9 +10,9 @@ export default function ContactForm() {
         action="https://formspree.io/f/xldbdjzj"
         method="POST"
         className="max-w-md mx-auto text-left 
-                   bg-white/40 dark:bg-white/5 
+                   bg-white/40 dark:bg-gray-900/50 
                    backdrop-blur-md p-6 rounded-xl shadow-md 
-                   border border-gray-300 dark:border-white/10"
+                   border border-gray-300 dark:border-gray-700"
       >
         <div className="mb-5">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
@@ -80,7 +80,7 @@ export default function ContactForm() {
                      bg-accent text-accent-contrast dark:text-black
                      font-semibold py-2 px-4 rounded-lg 
                      hover:bg-accent-strong hover:text-accent-contrast
-                     transition btn btn-outline border-gray-400 dark:border-white/20"
+                     transition btn btn-outline border-gray-400 dark:border-gray-600"
         >
           Send Message
         </button>

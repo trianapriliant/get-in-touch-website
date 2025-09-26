@@ -6,7 +6,7 @@ import { educationData } from '@/data/education';
 
 export default function EducationPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       
       <main className="flex-grow pt-24">
@@ -25,20 +25,20 @@ export default function EducationPage() {
                 {educationData.map((edu) => (
                   <div 
                     key={edu.id} 
-                    className="bg-black rounded-xl shadow-md p-6 border border-[#078f7a]"
+                    className="bg-background rounded-xl shadow-md p-6 border border-accent"
                   >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-white">{edu.institution}</h3>
-                        <p className="text-lg text-[#2AF5D2]">{edu.degree}</p>
+                        <h3 className="text-xl font-bold text-foreground">{edu.institution}</h3>
+                        <p className="text-lg text-accent">{edu.degree}</p>
                       </div>
-                      <span className="mt-2 md:mt-0 px-3 py-1 bg-[#078f7a] text-white rounded-full text-sm font-medium">
+                      <span className="mt-2 md:mt-0 px-3 py-1 bg-accent text-accent-contrast rounded-full text-sm font-medium">
                         {edu.period}
                       </span>
                     </div>
-                    <p className="text-gray-300 mb-4">{edu.description}</p>
+                    <p className="text-foreground/80 mb-4">{edu.description}</p>
                     <div className="flex items-center">
-                      <span className="text-sm font-medium text-gray-400">GPA: {edu.gpa}</span>
+                      <span className="text-sm font-medium text-foreground/60">GPA: {edu.gpa}</span>
                     </div>
                   </div>
                 ))}

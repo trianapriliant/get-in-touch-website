@@ -14,21 +14,21 @@ export default function ProjectGallery() {
   const filteredProjects = projects.filter((p) => p.category === activeCategory)
 
   return (
-    <section className="py-16 px-6 bg-gray text-white">
+    <section className="py-16 px-6 bg-background text-foreground">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-center">Work & Visual Feed</h2>
-        <p className="text-gray-400 text-center mb-12">Explore our diverse portfolio of projects</p>
+        <p className="text-gray-600 dark:text-gray-400 text-center mb-12">Explore our diverse portfolio of projects</p>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center border-b border-gray-700 mb-12">
+        <div className="flex justify-center border-b border-gray-300 dark:border-gray-700 mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-3 font-medium text-sm relative transition-colors duration-300 ${
                 activeCategory === cat
-                  ? "text-white"
-                  : "text-gray-400 hover:text-gray-200"
+                  ? "text-gray-900 dark:text-white"
+                  : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
               }`}
             >
               {cat}
@@ -60,7 +60,7 @@ export default function ProjectGallery() {
                   key={project.id}
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative rounded-xl overflow-hidden shadow-lg bg-neutral-900 border border-neutral-800 flex flex-row md:flex-col group`}
+                  className={`relative rounded-xl overflow-hidden shadow-lg bg-background border border-gray-200 dark:border-gray-800 flex flex-row md:flex-col group`}
                 >
                   <div className="w-1/3 md:w-full aspect-video md:aspect-video overflow-hidden">
                     <Image
@@ -74,8 +74,8 @@ export default function ProjectGallery() {
                   {/* Shadow divider for mobile view */}
                   <div className="w-px shadow-[0_0_4px_0px_rgba(255,255,255,0.1)] h-3/4 self-center block md:hidden"></div>
                   <div className="p-4 md:p-5 flex-grow flex flex-col w-2/3 md:w-full">
-                    <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">{project.title}</h3>
-                    <p className="text-gray-400 mb-3 md:mb-4 flex-grow text-xs md:text-sm">{project.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-3 md:mb-4 flex-grow text-xs md:text-sm">{project.description}</p>
                     <div className="mt-auto flex justify-between items-center">
                       <Link
                         href={project.link}
@@ -99,7 +99,7 @@ export default function ProjectGallery() {
                 </motion.div>
               ))
             ) : (
-              <p className="text-gray-400 col-span-full text-center py-12">
+              <p className="text-gray-600 dark:text-gray-400 col-span-full text-center py-12">
                 No projects available in this category.
               </p>
             )}

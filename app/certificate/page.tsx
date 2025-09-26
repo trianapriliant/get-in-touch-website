@@ -16,7 +16,7 @@ export default function CertificatePage() {
     : certificatesData.filter(cert => cert.issuer.toLowerCase().includes(filter));
 
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       
       <main className="flex-grow pt-24">
@@ -36,8 +36,8 @@ export default function CertificatePage() {
               <button
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === 'all'
-                    ? 'bg-[#2AF5D2] text-black'
-                    : 'bg-black text-gray-200 border border-[#078f7a] hover:bg-[#078f7a]'
+                    ? 'bg-accent text-accent-contrast'
+                    : 'bg-background text-foreground/70 border border-accent hover:bg-accent/10'
                 }`}
                 onClick={() => setFilter('all')}
               >
@@ -46,8 +46,8 @@ export default function CertificatePage() {
               <button
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === 'coursera'
-                    ? 'bg-[#2AF5D2] text-black'
-                    : 'bg-black text-gray-200 border border-[#078f7a] hover:bg-[#078f7a]'
+                    ? 'bg-accent text-accent-contrast'
+                    : 'bg-background text-foreground/70 border border-accent hover:bg-accent/10'
                 }`}
                 onClick={() => setFilter('coursera')}
               >
@@ -56,8 +56,8 @@ export default function CertificatePage() {
               <button
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === 'aws'
-                    ? 'bg-[#2AF5D2] text-black'
-                    : 'bg-black text-gray-200 border border-[#078f7a] hover:bg-[#078f7a]'
+                    ? 'bg-accent text-accent-contrast'
+                    : 'bg-background text-foreground/70 border border-accent hover:bg-accent/10'
                 }`}
                 onClick={() => setFilter('aws')}
               >
@@ -66,8 +66,8 @@ export default function CertificatePage() {
               <button
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === 'udemy'
-                    ? 'bg-[#2AF5D2] text-black'
-                    : 'bg-black text-gray-200 border border-[#078f7a] hover:bg-[#078f7a]'
+                    ? 'bg-accent text-accent-contrast'
+                    : 'bg-background text-foreground/70 border border-accent hover:bg-accent/10'
                 }`}
                 onClick={() => setFilter('udemy')}
               >
@@ -76,8 +76,8 @@ export default function CertificatePage() {
               <button
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === 'hackerrank'
-                    ? 'bg-[#2AF5D2] text-black'
-                    : 'bg-black text-gray-200 border border-[#078f7a] hover:bg-[#078f7a]'
+                    ? 'bg-accent text-accent-contrast'
+                    : 'bg-background text-foreground/70 border border-accent hover:bg-accent/10'
                 }`}
                 onClick={() => setFilter('hackerrank')}
               >
@@ -92,10 +92,10 @@ export default function CertificatePage() {
                   {filteredCertificates.map((cert) => (
                     <div 
                       key={cert.id} 
-                      className={`bg-black rounded-xl shadow-md overflow-hidden border cursor-pointer transition-all ${
+                      className={`bg-background rounded-xl shadow-md overflow-hidden border cursor-pointer transition-all ${
                         selectedCertificate.id === cert.id 
-                          ? 'ring-2 ring-[#2AF5D2] border-[#2AF5D2]' 
-                          : 'border-[#078f7a] hover:border-[#18c9a8]'
+                          ? 'ring-2 ring-accent border-accent' 
+                          : 'border-accent hover:border-accent-strong'
                       }`}
                       onClick={() => setSelectedCertificate(cert)}
                     >
@@ -109,8 +109,8 @@ export default function CertificatePage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 right-0 p-5">
-                          <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
-                          <p className="text-[#2AF5D2] font-medium">{cert.issuer}</p>
+                          <h3 className="text-lg font-bold text-foreground mb-1">{cert.title}</h3>
+                          <p className="text-accent font-medium">{cert.issuer}</p>
                         </div>
                       </div>
                     </div>
@@ -120,8 +120,8 @@ export default function CertificatePage() {
 
               {/* Certificate Detail */}
               <div className="lg:w-1/3">
-                <div className="bg-black rounded-xl shadow-md p-6 border border-[#078f7a] sticky top-6">
-                  <h3 className="text-2xl font-bold text-white mb-4">Certificate Details</h3>
+                <div className="bg-background rounded-xl shadow-md p-6 border border-accent sticky top-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Certificate Details</h3>
                   
                   {selectedCertificate && (
                     <>
@@ -135,25 +135,25 @@ export default function CertificatePage() {
                         />
                       </div>
                       
-                      <h4 className="text-xl font-bold text-white mb-2">{selectedCertificate.title}</h4>
-                      <p className="text-[#2AF5D2] font-medium mb-3">{selectedCertificate.issuer}</p>
+                      <h4 className="text-xl font-bold text-foreground mb-2">{selectedCertificate.title}</h4>
+                      <p className="text-accent font-medium mb-3">{selectedCertificate.issuer}</p>
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex justify-between">
-                          <span className="text-gray-400">Issue Date:</span>
+                          <span className="text-foreground/60">Issue Date:</span>
                           <span className="font-medium">{selectedCertificate.date}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-400">Credential ID:</span>
+                          <span className="text-foreground/60">Credential ID:</span>
                           <span className="font-medium">{selectedCertificate.credentialId}</span>
                         </div>
                       </div>
                       
-                      <p className="text-gray-300 mb-6">{selectedCertificate.description}</p>
+                      <p className="text-foreground/80 mb-6">{selectedCertificate.description}</p>
                       
                       <a 
                         href={selectedCertificate.link} 
-                        className="inline-block w-full text-center px-4 py-2 bg-[#2AF5D2] text-black rounded-lg hover:bg-[#18c9a8] transition-colors"
+                        className="inline-block w-full text-center px-4 py-2 bg-accent text-accent-contrast rounded-lg hover:bg-accent-strong transition-colors"
                       >
                         View Credential
                       </a>

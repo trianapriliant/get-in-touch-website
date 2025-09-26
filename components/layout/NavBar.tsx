@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MusicPlayer from '../feature/MusicPlayer';
+import ThemeToggle from '../feature/ThemeToggle';
 import Image from 'next/image';
 
 export default function NavBar() {
@@ -85,6 +86,7 @@ export default function NavBar() {
           >
             More About Me
           </button>
+          <ThemeToggle />
           <MusicPlayer />
           <Link
             href="/#contact"
@@ -133,6 +135,9 @@ export default function NavBar() {
               >
                 More About Me
               </button>
+            </li>
+            <li className="flex justify-center py-2">
+              <ThemeToggle />
             </li>
             <li>
               <Link

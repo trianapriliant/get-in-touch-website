@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 
 export default function HobbiesPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       
       <main className="flex-grow pt-24">
@@ -13,7 +13,7 @@ export default function HobbiesPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-2">My Hobbies</h1>
-            <p className="text-gray-400 text-center max-w-2xl mx-auto">
+            <p className="text-foreground/60 text-center max-w-2xl mx-auto">
               What I enjoy doing outside of work
             </p>
           </div>
@@ -23,8 +23,8 @@ export default function HobbiesPage() {
         <section className="py-8 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-black rounded-xl shadow-md p-8 border border-[#078f7a]">
-                <p className="text-gray-300 mb-6">
+              <div className="bg-background rounded-xl shadow-md p-8 border border-accent">
+                <p className="text-foreground/80 mb-6">
                   When I&apos;m not designing interfaces or writing code, you&apos;ll often find me immersed in activities that 
                   fuel my creativity and curiosity. Photography is one of my greatest passions—I love capturing moments 
                   that tell stories, whether it&apos;s the play of light through city architecture or the subtle expressions 
@@ -32,7 +32,7 @@ export default function HobbiesPage() {
                   and attention to detail in my professional work.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Reading occupies a significant portion of my free time. I&apos;m drawn to science fiction and fantasy 
                   novels that transport me to different worlds, but I also enjoy non-fiction books on psychology, 
                   philosophy, and technology trends. Authors like Ursula K. Le Guin, Neal Stephenson, and Yuval Noah 
@@ -40,7 +40,7 @@ export default function HobbiesPage() {
                   bookshelf at home and use an e-reader for travel, always with at least two books in progress.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Cooking is both a creative outlet and a meditative practice for me. I enjoy experimenting with flavors 
                   from different cuisines, particularly Asian and Mediterranean dishes. There&apos;s something satisfying 
                   about following a recipe precisely and then improvising with spices and ingredients. Weekend cooking 
@@ -48,7 +48,7 @@ export default function HobbiesPage() {
                   to my methodical nature.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Gaming has been a constant companion since childhood, evolving from simple puzzle games to complex 
                   strategy and narrative-driven experiences. I appreciate games that challenge my problem-solving 
                   abilities or tell compelling stories. Indie games hold a special place in my heart for their 
@@ -56,7 +56,7 @@ export default function HobbiesPage() {
                   user experience design—the best games intuitively guide players without explicit instruction.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Hiking and outdoor exploration provide balance to my screen-heavy profession. I seek out trails 
                   that offer both physical challenge and visual rewards, often combining hikes with photography 
                   opportunities. These experiences ground me and remind me of the importance of simplicity and 
@@ -64,7 +64,7 @@ export default function HobbiesPage() {
                   of navigation and route planning also appeal to my analytical side.
                 </p>
 
-                <p className="text-gray-300">
+                <p className="text-foreground/80">
                   Learning new skills is a perpetual hobby of mine. Recently, I&apos;ve been exploring music production 
                   using digital audio workstations, fascinated by the parallels between sound design and visual 
                   design. I&apos;m also teaching myself basic principles of 3D modeling and animation, which complements 

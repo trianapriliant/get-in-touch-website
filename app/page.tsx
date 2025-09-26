@@ -13,7 +13,7 @@ import IntroScroll from '@/components/section/IntroScroll';
 
 export default function Home() {
   return (
-    <div className='bg-base-400'>
+    <div className='bg-background'>
       <NavBar />
       <main>
 
@@ -26,7 +26,7 @@ export default function Home() {
         <About />
 
         {/* Intro Scroll Section */}
-        <section id="intro-scroll" className="py-16 bg-gray-1000 mt-15">
+        <section id="intro-scroll" className="py-16 bg-background mt-15">
           <IntroScroll
             title="Welcome to My Portfolio"
             subtitle="Explore my work and creative projects"
@@ -59,7 +59,7 @@ export default function Home() {
         </section>
 
         {/* ContactForm Section */}
-        <section id="contact" className="py-16 bg-base-100/3">
+        <section id="contact" className="py-16 bg-background/10">
           <ContactForm />
         </section>
 

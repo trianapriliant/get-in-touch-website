@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 
 export default function DreamsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       
       <main className="flex-grow pt-24">
@@ -13,7 +13,7 @@ export default function DreamsPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-2">My Dreams</h1>
-            <p className="text-gray-400 text-center max-w-2xl mx-auto">
+            <p className="text-foreground/60 text-center max-w-2xl mx-auto">
               Aspirations that drive my journey forward
             </p>
           </div>
@@ -23,8 +23,8 @@ export default function DreamsPage() {
         <section className="py-8 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-black rounded-xl shadow-md p-8 border border-[#078f7a]">
-                <p className="text-gray-300 mb-6">
+              <div className="bg-background rounded-xl shadow-md p-8 border border-accent">
+                <p className="text-foreground/80 mb-6">
                   Dreams are the invisible threads that weave through every decision I make and project I undertake. 
                   They serve as both compass and destination, guiding my professional growth while inspiring me to 
                   push boundaries in my craft. My ultimate dream is to create technology that genuinely improves 
@@ -32,7 +32,7 @@ export default function DreamsPage() {
                   solutions that address real human needs with empathy and dignity.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Professionally, I aspire to lead teams that pioneer inclusive design practices. I envision building 
                   products that are inherently accessible, considering diverse abilities and backgrounds from the 
                   very first wireframe. My dream is to establish a design system that becomes an industry standard 
@@ -40,7 +40,7 @@ export default function DreamsPage() {
                   sharing knowledge that empowers others to create technology with conscience.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   On a broader scale, I dream of contributing to projects that tackle pressing global challenges. 
                   Whether it&apos;s developing platforms that facilitate better healthcare access, creating educational 
                   tools that democratize learning, or building systems that promote environmental sustainability, 
@@ -49,7 +49,7 @@ export default function DreamsPage() {
                   them, and to solve complex problems like climate modeling or disease prediction.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Entrepreneurially, I harbor dreams of founding a company that embodies my values—where innovation 
                   goes hand in hand with social responsibility. This hypothetical venture would prioritize employee 
                   wellbeing, maintain transparent communication with stakeholders, and measure success not just by 
@@ -57,7 +57,7 @@ export default function DreamsPage() {
                   fosters experimentation, celebrates failure as learning, and encourages interdisciplinary collaboration.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   Personally, I dream of achieving a harmonious work-life integration where my professional 
                   accomplishments enhance rather than compromise my relationships and personal growth. I envision 
                   having the freedom to pursue passion projects that may never generate revenue but fulfill my 
@@ -66,7 +66,7 @@ export default function DreamsPage() {
                   creative output.
                 </p>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-foreground/80 mb-6">
                   In the realm of recognition, I hope to eventually contribute to the design and development 
                   community through speaking engagements, writing, or open-source contributions that help advance 
                   the field. My dream is to see innovations I&apos;ve been part of become case studies in design schools, 
@@ -75,7 +75,7 @@ export default function DreamsPage() {
                   human-centered.
                 </p>
 
-                <p className="text-gray-300">
+                <p className="text-foreground/80">
                   Perhaps most importantly, I dream of maintaining wonder and curiosity throughout my career. 
                   In an industry that can sometimes prioritize speed over thoughtfulness, I want to be known for 
                   asking &quot;what if?&quot; and &quot;why not?&quot; rather than simply executing tasks efficiently. These dreams 

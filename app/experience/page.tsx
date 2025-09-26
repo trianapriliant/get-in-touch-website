@@ -9,7 +9,7 @@ export default function ExperiencePage() {
   const [activeExperience, setActiveExperience] = useState(0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <NavBar />
       
       <main className="flex-grow pt-24">
@@ -28,7 +28,7 @@ export default function ExperiencePage() {
             <div className="max-w-4xl mx-auto">
               <div className="relative">
                 {/* Vertical line */}
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-[#078f7a] transform translate-x-[-50%]"></div>
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent transform translate-x-[-50%]"></div>
                 
                 {/* Experience items */}
                 {experienceData.map((exp, index) => (
@@ -40,42 +40,42 @@ export default function ExperiencePage() {
                     <div className={`absolute left-0 top-2 w-8 h-8 rounded-full border-4 flex items-center justify-center ${
                       activeExperience === index 
                         ? 'border-[#2AF5D2] bg-[#2AF5D2]' 
-                        : 'border-[#078f7a] bg-black'
+                        : 'border-accent bg-background'
                     }`}>
                       {activeExperience === index && (
-                        <div className="w-2 h-2 bg-black rounded-full"></div>
+                        <div className="w-2 h-2 bg-background rounded-full"></div>
                       )}
                     </div>
                     
                     {/* Experience card */}
                     <div 
-                      className={`bg-black rounded-xl shadow-md p-6 border cursor-pointer transition-all ${
+                      className={`bg-background rounded-xl shadow-md p-6 border cursor-pointer transition-all ${
                         activeExperience === index 
                           ? 'border-[#2AF5D2] shadow-lg' 
-                          : 'border-[#078f7a] hover:border-[#18c9a8]'
+                          : 'border-accent hover:border-accent-strong'
                       }`}
                       onClick={() => setActiveExperience(index)}
                     >
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-white">{exp.position}</h3>
-                          <p className="text-lg text-[#2AF5D2]">{exp.company}</p>
+                          <h3 className="text-xl font-bold text-foreground">{exp.position}</h3>
+                          <p className="text-lg text-accent">{exp.company}</p>
                         </div>
-                        <span className="mt-2 md:mt-0 px-3 py-1 bg-[#078f7a] text-white rounded-full text-sm font-medium">
+                        <span className="mt-2 md:mt-0 px-3 py-1 bg-accent text-accent-contrast rounded-full text-sm font-medium">
                           {exp.period}
                         </span>
                       </div>
                       
-                      <p className="text-gray-300 mb-4">{exp.description}</p>
+                      <p className="text-foreground/80 mb-4">{exp.description}</p>
                       
                       {activeExperience === index && (
                         <div className="mt-4">
-                          <h4 className="font-semibold text-white mb-2">Key Responsibilities:</h4>
+                          <h4 className="font-semibold text-foreground mb-2">Key Responsibilities:</h4>
                           <ul className="space-y-2">
                             {exp.responsibilities.map((resp, respIndex) => (
                               <li key={respIndex} className="flex items-start">
-                                <span className="text-[#2AF5D2] mr-2">•</span>
-                                <span className="text-gray-300">{resp}</span>
+                                <span className="text-accent mr-2">•</span>
+                                <span className="text-foreground/80">{resp}</span>
                               </li>
                             ))}
                           </ul>

@@ -49,7 +49,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-16 bg-gray-1000">
+    <section id="about" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         {/* pastikan pada large screens baris disejajarkan di tengah vertikal */}
         {/* batasi lebar baris dan center seluruh block agar tidak menempel ke tepi */}

@@ -11,6 +11,13 @@ module.exports = {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
       },
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        accent: 'var(--color-accent)',
+        'accent-strong': 'var(--color-accent-strong)',
+        'accent-contrast': 'var(--color-accent-contrast)',
+      }
     },
   },
   plugins: [require('daisyui')],
