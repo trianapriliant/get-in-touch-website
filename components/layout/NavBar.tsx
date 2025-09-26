@@ -75,14 +75,14 @@ export default function NavBar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-gray-200 hover:text-accent transition-colors"
+              className="text-foreground/80 hover:text-accent transition-colors"
             >
               {link.label}
             </Link>
           ))}
           <button
             onClick={(e) => handleNavClick(e, "#footer")}
-            className="text-gray-200 hover:text-accent transition-colors"
+            className="text-foreground/80 hover:text-accent transition-colors"
           >
             More About Me
           </button>
@@ -91,7 +91,7 @@ export default function NavBar() {
           <Link
             href="/#contact"
             onClick={(e) => handleNavClick(e, "/#contact")}
-            className="btn bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong rounded-md border-0"
+            className="btn bg-accent text-accent-contrast hover:bg-accent-strong rounded-md border-0"
           >
             Let&apos;s Talk
           </Link>
@@ -122,7 +122,7 @@ export default function NavBar() {
                 <Link
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block text-lg text-gray-200 hover:text-accent transition"
+                  className="block text-lg text-foreground/80 hover:text-accent transition"
                 >
                   {link.label}
                 </Link>
@@ -131,7 +131,7 @@ export default function NavBar() {
             <li>
               <button
                 onClick={(e) => handleNavClick(e, "#footer")}
-                className="block w-full text-lg text-gray-200 hover:text-accent transition py-2"
+                className="block w-full text-lg text-foreground/80 hover:text-accent transition py-2"
               >
                 More About Me
               </button>
@@ -143,7 +143,7 @@ export default function NavBar() {
               <Link
                 href="/#contact"
                 onClick={(e) => handleNavClick(e, "/#contact")}
-                className="btn w-full bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong border-0"
+                className="btn w-full bg-accent text-accent-contrast hover:bg-accent-strong border-0"
               >
                 Let&apos;s Talk
               </Link>

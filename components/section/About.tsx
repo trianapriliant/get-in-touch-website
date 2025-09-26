@@ -67,7 +67,7 @@ export default function About() {
                       className={`option ${option} cursor-pointer px-4 py-2 rounded-full transition-colors ${
                         activeOption === option
                           ? 'is--active bg-accent text-accent-contrast'
-                          : 'text-gray-900 dark:text-gray-300 hover:text-accent hover:bg-accent/10'
+                          : 'text-foreground hover:text-accent hover:bg-accent/10'
                       }`}
                       onClick={() => handleOptionClick(option)}
                       whileHover={{ scale: 1.05 }}
@@ -87,7 +87,7 @@ export default function About() {
                       initial="inactive"
                       animate="active"
                       exit="inactive"
-                      className="text text-2xl text-white mb-4"
+                      className="text text-2xl text-foreground mb-4"
                     >
                       {activeOption === 'For Anyone' && (
                         "Hi there! I'm just starting out as a small designer & developer, and I love helping people bring their ideas to life through thoughtful, affordable thing."
@@ -114,12 +114,12 @@ export default function About() {
             </div>
 
             <div className="flex flex-col gap-2 mt-8">
-              <a href="#contact" className="text-gray-300 hover:text-accent transition-colors">Connect</a>
-              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-accent transition-colors">GitHub</a>
-              <a href="https://x.com/trianapril12" className="text-gray-300 hover:text-accent transition-colors">Twitter/X</a>
-              <a href="https://linkedin.com/in/trianaprilianto3" className="text-gray-300 hover:text-accent transition-colors">LinkedIn</a>
-              <a href="https://instagram.com/trianapriliant" className="text-gray-300 hover:text-accent transition-colors">Instagram</a>
-              <a href="mailto:trianaprilinto3@gmail.com" className="text-gray-300 hover:text-accent transition-colors">Email</a>
+              <a href="#contact" className="text-foreground/80 hover:text-accent transition-colors">Connect</a>
+              <a href="https://x.com/trianapril12" className="text-foreground/80 hover:text-accent transition-colors">GitHub</a>
+              <a href="https://x.com/trianapril12" className="text-foreground/80 hover:text-accent transition-colors">Twitter/X</a>
+              <a href="https://linkedin.com/in/trianaprilianto3" className="text-foreground/80 hover:text-accent transition-colors">LinkedIn</a>
+              <a href="https://instagram.com/trianapriliant" className="text-foreground/80 hover:text-accent transition-colors">Instagram</a>
+              <a href="mailto:trianaprilinto3@gmail.com" className="text-foreground/80 hover:text-accent transition-colors">Email</a>
             </div>
           </div>
 
@@ -145,13 +145,13 @@ export default function About() {
 
             {/* overlay judul muncul saat hover */}
             <motion.div
-              className="absolute left-0 right-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white"
-              variants={overlayVariants}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-            >
-              <h3 className="text-sm font-semibold">Trian Aprilianto</h3>
-              <p className="text-xs text-gray-200">Designer & Developer</p>
-            </motion.div>
+                className="absolute left-0 right-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-foreground"
+                variants={overlayVariants}
+                transition={{ duration: 0.28, ease: "easeOut" }}
+              >
+                <h3 className="text-sm font-semibold">Trian Aprilianto</h3>
+                <p className="text-xs text-foreground/80">Designer & Developer</p>
+              </motion.div>
           </motion.div>
 
         </div>

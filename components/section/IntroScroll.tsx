@@ -70,7 +70,7 @@ export default function IntroScroll({
         </h2>
 
         <p
-          className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-base md:text-lg mb-1"
+          className="max-w-3xl mx-auto text-foreground/80 text-base md:text-lg mb-1"
           ref={(el) => { linesRef.current[1] = el; }}
         >
           {subtitle}
@@ -79,7 +79,7 @@ export default function IntroScroll({
         <div className="flex items-center justify-center gap-3">
           <button
             onClick={onClick}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong transition"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-contrast hover:bg-accent-strong transition"
             aria-label={`Scroll to ${targetId}`}
             ref={(el) => { linesRef.current[2] = el; }}
           >

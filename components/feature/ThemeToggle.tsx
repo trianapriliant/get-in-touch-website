@@ -31,31 +31,31 @@ export default function ThemeToggle() {
 
   return (
     <motion.button
-      onClick={toggleTheme}
-      className="relative rounded-full w-12 h-6 bg-gray-300 dark:bg-gray-600 flex items-center p-1 cursor-pointer transition-colors duration-300"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-    >
-      <motion.div
-        className="absolute w-4 h-4 bg-white rounded-full shadow-md flex items-center justify-center"
-        animate={{ 
-          x: theme === 'dark' ? 24 : 0,
-          backgroundColor: theme === 'dark' ? '#2AF5D2' : '#078f7a'
-        }}
-        transition={{ type: "spring", stiffness: 700, damping: 30 }}
+        onClick={toggleTheme}
+        className="relative rounded-full w-12 h-6 bg-foreground/20 flex items-center p-1 cursor-pointer transition-colors duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       >
-        {theme === 'dark' ? (
-          <FiMoon className="text-black text-xs" />
-        ) : (
-          <FiSun className="text-white text-xs" />
-        )}
-      </motion.div>
-      
-      <div className="flex justify-between w-full px-1">
-        <FiSun className="text-yellow-500 text-sm" />
-        <FiMoon className="text-gray-700 dark:text-gray-300 text-sm" />
-      </div>
-    </motion.button>
+        <motion.div
+          className="absolute w-4 h-4 bg-background rounded-full shadow-md flex items-center justify-center"
+          animate={{ 
+            x: theme === 'dark' ? 24 : 0,
+            backgroundColor: theme === 'dark' ? 'var(--color-accent)' : 'var(--color-accent)'
+          }}
+          transition={{ type: "spring", stiffness: 700, damping: 30 }}
+        >
+          {theme === 'dark' ? (
+            <FiMoon className="text-foreground text-xs" />
+          ) : (
+            <FiSun className="text-foreground text-xs" />
+          )}
+        </motion.div>
+        
+        <div className="flex justify-between w-full px-1">
+          <FiSun className="text-yellow-500 text-sm" />
+          <FiMoon className="text-foreground/60 text-sm" />
+        </div>
+      </motion.button>
   );
 }

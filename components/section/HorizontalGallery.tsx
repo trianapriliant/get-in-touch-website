@@ -157,7 +157,7 @@ export default function HorizontalGallery({
       {title && (
         <div className="container mx-auto px-4">
           <h2
-            className="text-3xl font-bold mb-4"
+            className="text-3xl font-bold mb-4 text-foreground"
             // sticky di bawah navbar; z-index tinggi agar tidak tertutup
             style={{
               position: "sticky",
@@ -195,7 +195,7 @@ export default function HorizontalGallery({
             {items.map((it) => (
               <div
                 key={it.id}
-                className="relative rounded-lg overflow-hidden flex-shrink-0 shadow-lg bg-neutral-900"
+                className="relative rounded-lg overflow-hidden flex-shrink-0 shadow-lg bg-background"
                 style={{
                   // responsive: allow images to become larger on small screens,
                   // but never exceed provided max width/height.
@@ -214,7 +214,7 @@ export default function HorizontalGallery({
                   style={{ objectFit: "cover" }}
                 />
                 {it.title && (
-                  <div className="absolute left-0 bottom-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent text-white">
+                  <div className="absolute left-0 bottom-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent text-foreground">
                     <h3 className="text-sm font-semibold">{it.title}</h3>
                   </div>
                 )}

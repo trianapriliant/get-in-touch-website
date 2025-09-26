@@ -51,12 +51,12 @@ export default function Hero() {
           + <span className="text-accent">{text}</span>
           <span className="animate-pulse">|</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 mb-8 mx-6">
+        <p className="text-lg md:text-xl text-foreground/80 mb-8 mx-6">
           Offering custom web design and development - along with a range of small to medium creative digital projects.
         </p>
         <button
           onClick={() => scrollToSection("about")}
-          className="btn bg-accent text-accent-contrast dark:text-black hover:bg-accent-strong rounded-3xl border border-black/6 dark:border-transparent px-6 py-2"
+          className="btn bg-accent text-accent-contrast hover:bg-accent-strong rounded-3xl border border-foreground/10 dark:border-transparent px-6 py-2"
           aria-label="Scroll to about"
         >
           Dive in

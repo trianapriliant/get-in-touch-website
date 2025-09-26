@@ -107,9 +107,9 @@ export default function ProjectsOngoingPage() {
                       </div>
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                         selectedProject.status === 'In Progress' ? 'bg-accent text-accent-contrast' :
-                        selectedProject.status === 'Planning' ? 'bg-yellow-500 text-black' :
-                        selectedProject.status === 'Development' ? 'bg-green-500 text-black' :
-                        'bg-purple-500 text-white'
+                        selectedProject.status === 'Planning' ? 'bg-yellow-500 text-background' :
+                        selectedProject.status === 'Development' ? 'bg-green-500 text-background' :
+                        'bg-purple-500 text-background'
                       }`}>
                         {selectedProject.status}
                       </span>
@@ -194,7 +194,7 @@ export default function ProjectsOngoingPage() {
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-bold text-foreground">{collab.partner}</h3>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          collab.status === 'Active' ? 'bg-green-500 text-black' : 'bg-background text-foreground/70 border border-accent'
+                          collab.status === 'Active' ? 'bg-green-500 text-background' : 'bg-background text-foreground/70 border border-accent'
                         }`}>
                           {collab.status}
                         </span>
