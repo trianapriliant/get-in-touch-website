@@ -115,7 +115,7 @@ export default function About() {
 
             <div className="flex flex-col gap-2 mt-8">
               <a href="#contact" className="text-foreground/80 hover:text-accent transition-colors">Connect</a>
-              <a href="https://x.com/trianapril12" className="text-foreground/80 hover:text-accent transition-colors">GitHub</a>
+              <a href="https://github.com/trianapriliant" className="text-foreground/80 hover:text-accent transition-colors">GitHub</a>
               <a href="https://x.com/trianapril12" className="text-foreground/80 hover:text-accent transition-colors">Twitter/X</a>
               <a href="https://linkedin.com/in/trianaprilianto3" className="text-foreground/80 hover:text-accent transition-colors">LinkedIn</a>
               <a href="https://instagram.com/trianapriliant" className="text-foreground/80 hover:text-accent transition-colors">Instagram</a>
