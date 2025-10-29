@@ -6,9 +6,11 @@ import Link from 'next/link';
 import MusicPlayer from '../feature/MusicPlayer';
 import ThemeToggle from '../feature/ThemeToggle';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
@@ -56,7 +58,7 @@ export default function NavBar() {
       window.scrollTo({ top: y, behavior: 'smooth' });
     } else {
       // fallback: navigate to href if element not found
-      window.location.hash = `#${hash}`;
+      router.push(href);
     }
   };
 
