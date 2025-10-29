@@ -35,7 +35,6 @@ export default function NavBar() {
     
     // For other links, handle smooth scrolling
     e.preventDefault();
-    setIsOpen(false);
     
     // Check if it's a special "More About Me" link
     if (href === "#footer") {
@@ -45,12 +44,16 @@ export default function NavBar() {
         const y = footer.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
+      setIsOpen(false);
       return;
     }
     
     // Extract hash from href (e.g., "/#projects" -> "projects")
     const hash = href.split('#')[1];
-    if (!hash) return;
+    if (!hash) {
+      setIsOpen(false);
+      return;
+    };
     
     const el = document.getElementById(hash);
     if (el) {
@@ -60,6 +63,7 @@ export default function NavBar() {
       // fallback: navigate to href if element not found
       router.push(href);
     }
+    setIsOpen(false);
   };
 
   const menuVariants = {
